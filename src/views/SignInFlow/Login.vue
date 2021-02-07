@@ -50,12 +50,13 @@ align-items: left;
 width: 100%;
 
 }
+//2 кнопки
 .sign-foo {
     height: 4.08rem;
-width: 62%;
+width: 67%;
 text-align: right;
 }
-
+//модуль с картинкой
 .start-bg {
     align-items: flex-start;
     display: flex;
@@ -68,7 +69,7 @@ text-align: right;
     border-width: 1px 1px 1px 0px;
 
 }
-
+//серый типа-хедер
 h4 {
 position: absolute;
 margin: 0px;
@@ -81,7 +82,7 @@ background: $neutral-050;
 left: 0px;
 top: 0px;
 }
-
+// список фич
 ul {
 display: flex;
 flex-direction: column;
@@ -90,17 +91,17 @@ padding-block: 1.5rem;
 }
 
 li {
-    min-width: 12.5rem;
+    min-width: 9.5rem;
     max-width: 18.5rem;
     text-align: left;
     padding: 0.35rem;
     margin-left: 1rem;
 }
-
+//список с фоном
 .left-list {
     position: absolute;
-    width: 25%;
-    min-width: 17.7rem;
+    width: 30%;
+    min-width: 15.7rem;
     background: $neutral-050;
     border:  solid $neutral-200;
     border-width: 1px 0px 0px 1px;
@@ -108,10 +109,10 @@ li {
     right: 0px;
     bottom: 0px;
 }
-
+//текст про технологии
 .left-block {
     position: absolute;
-    padding-right: 38%;
+    padding-right: 33%;
     width: 14.75rem;
 
     right: 0px;
@@ -129,10 +130,13 @@ li {
         width: 80%;
     }
     .sign-foo {
-        width: 74%;
+        width: 69%;
     }
     .left-block {
-    padding-right: 26%;
+    padding-right: 31%;
+    }
+    .left-list{
+        max-width: 560px;
     }
 }
 
