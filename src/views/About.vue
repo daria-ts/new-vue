@@ -2,7 +2,7 @@
   <div class="about">
     <Header />
     <!-- <SigninCard /> -->
-    <h1>Статус пользователя – верифицирован </h1>
+    <h1>Статус пользователя – верифицирован</h1>
   </div>
 </template>
 
@@ -15,8 +15,8 @@ import Header from "@/components/Header.vue";
 export default {
   name: "Home",
   components: {
-  // SigninCard,
-    Header 
+    // SigninCard,
+    Header
   }
 };
 </script>

@@ -3,21 +3,21 @@
 </template>
 
 <style lang="scss">
-
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/typography.scss";
 @import "@/global-styles/tokens.scss";
 
 body {
-  margin:0px;
-  background-color: $neutral-010;}
+  margin: 0px;
+  background-color: $neutral-010;
+}
 
 h1 {
   @include h-m($primary-500);
 }
 
 h4 {
-@include overline($neutral-700);
+  @include overline($neutral-700);
 }
 
 p {
@@ -30,10 +30,9 @@ li {
 #app {
   font-family: $pfont;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $neutral-700;
-  
 }
 
 #nav {

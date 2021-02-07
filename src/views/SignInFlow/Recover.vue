@@ -1,15 +1,11 @@
 <template>
-    <div>
-
-    </div>
+  <div></div>
 </template>
 
 <script>
-    export default {
-        name: "Recover"
-    }
+export default {
+  name: "Recover"
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
