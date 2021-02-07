@@ -14,7 +14,7 @@
 по&nbsp;технологии <nobr>PWA-приложения:</nobr></div>
         <div class="left-list"> 
         <ul>
-            <li>Работает на любых платформах</li>
+            <li>Работает на любых устройствах</li>
             <li>Весит меньше 1 Мб</li>
             <li>Не требует обновлений</li>
             <li>Может использоваться без&nbsp;интернета</li>
@@ -33,6 +33,9 @@
 </script>
 
 <style lang="scss" scoped>
+
+//styles 
+
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/tokens.scss";
 
