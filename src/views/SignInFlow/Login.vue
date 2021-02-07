@@ -17,9 +17,9 @@
             <li>Работает на любых устройствах</li>
             <li>Весит меньше 1 Мб</li>
             <li>Не требует обновлений</li>
-            <li>Может использоваться без&nbsp;интернета</li>
+            <li>Можно пользоваться без&nbsp;интернета</li>
             <li>Быстро грузится</li>
-            <li>Обеспечивает безопасную ваших данных и&nbsp;конфиденциальность</li>
+            <li>Обеспечивает безопасность ваших данных и&nbsp;конфиденциальность</li>
         </ul>
         </div>
         
@@ -58,6 +58,10 @@ text-align: right;
 }
 //модуль с картинкой
 .start-bg {
+    background-image: url("/assets/bgimage.png"); 
+    height: 500px;
+    background-position: center; 
+    background-repeat: no-repeat;
     align-items: flex-start;
     display: flex;
     flex-direction: row;
@@ -136,7 +140,7 @@ li {
     padding-right: 31%;
     }
     .left-list{
-        max-width: 560px;
+        max-width: 35rem;
     }
 }
 
