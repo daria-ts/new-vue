@@ -1,0 +1,97 @@
+//font-sizes
+$font-giga: 6rem;
+$font-xxl: 3.75rem;
+$font-xl: 3rem;
+$font-l: 2rem;
+$font-m: 1.5rem;
+$font-s: 1.25rem;
+$font-xs: 1rem;
+$font-xs1: 0.9375rem;
+$font-xxs: 0.875rem;
+$font-min: 0.6875rem;
+$font-micro: 0.625rem;
+
+//line heights
+$lh-xxs: 125%;
+$lh-xs: 130%;
+$lh-s: 133%;
+$lh-m: 138%;
+$lh-l: 142%;
+$lh-xl: 150%;
+$lh-xxl: 158%;
+
+//letter spacings
+$lspace-xxs: -0.05em;
+$lspace-xs: -0.01em;
+$lspace-m: 0.0075em;
+$lspace-l: 0.0168em;
+$lspace-xl: 0.003em;
+$lspace-xxl: 0.005em;
+$lspace-giga: 0.15em;
+
+//radii
+$radi-xs: 0.25rem;
+$radi-s: 0.5rem;
+$radi-m: 1rem;
+$radi-circle: 20rem;
+
+//borders
+$border-xs: 1px;
+$border-s: 2px;
+$border-m: 4px;
+$border-l: 8px;
+
+//spacers
+$space-micro: 0.25rem;
+$space-xs: 0.5rem;
+$space-s: 1rem;
+$space-m: 1.5rem;
+$space-l: 2.25rem;
+$space-xl: 3rem;
+$space-xxl: 4rem;
+
+//z-index
+$z-modal: 9999;
+$z-sticky: 100;
+$z-zero: 0;
+$z-1: 1;
+$z-2: 2;
+$z-10: 10;
+
+//opasity
+$disabled: 0.5;
+$bg-opasity: 0.9;
+
+//media-query 768px 1280px
+$br-sm: 48rem;
+$br-md: 80rem;
+
+//durations
+$dur-quick: 0.15s;
+$dur-normal: 0.25s;
+$dur-med: 0.6s;
+$dur-slow: 1s;
+
+
+
+//delays
+$delay-quick: 0.15s;
+$delay-normal: 0.25s;
+$delay-med: 0.6s;
+$delay-slow: 1s;
+
+
+//easings
+
+$easeIn: cubic-bezier(0.12, 0, 0.39, 0);
+$easeOut: cubic-bezier(0.61, 1, 0.88, 1);
+$easeInOut: cubic-bezier(0.37, 0, 0.63, 1);
+
+//effects
+
+$btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$btn-shadow-inner: 0 4px 4px 0 rgba(0,0,0,0.15) inset;
+$card-shadow:0 10px 23px 0 rgba(0,0,0,0.05),
+0 30px 76px 0 rgba(0,0,0,0.08),
+0 94px 339px 0 rgba(0,0,0,0.13);
+$blur:blur(12px);

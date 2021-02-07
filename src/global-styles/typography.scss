@@ -1,0 +1,160 @@
+//fonts
+//montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+
+@font-face {
+    font-family: "CeraStencilPRO-Bold";
+    src: local("CeraStencilPRO-Bold"),
+     url(./assets/fonts/CeraStencilPRO-Bold.woff) format("woff");
+  }
+
+//cera
+$headfont: 'CeraStencilPRO-Bold', sans-serif;
+//montserrat
+$pfont: 'Montserrat', sans-serif;
+
+//tokens
+//letter spaces
+$lspace-xxs: -0.05em;
+$lspace-xs: -0.01em;
+$lspace-m: 0.0075em;
+$lspace-l: 0.0168em;
+$lspace-xl: 0.003em;
+$lspace-xxl: 0.005em;
+$lspace-giga: 0.15em;
+
+// headings
+
+@mixin h-xxl ($color: $primary-500){
+  font-family: $headfont;
+  font-size: $font-giga;
+  line-height: $lh-xxs;
+  letter-spacing: $lspace-xs;
+  color: $color;
+}
+
+@mixin h-xl ($color: $primary-500){
+  font-family: $headfont;
+  font-size: $font-xxl;
+  line-height: $lh-s;
+  letter-spacing: $lspace-xs;
+  color: $color;
+}
+
+@mixin h-l ($color: $primary-500){
+  font-family: $headfont;
+  font-size: $font-xl;
+  line-height: $lh-s;
+  letter-spacing: $lspace-xxs;
+  color: $color;
+}
+
+@mixin h-m ($color: $primary-500){
+  font-family: $headfont;
+  font-size: $font-l;
+  line-height: $lh-xs;
+  color: $color;
+}
+
+@mixin h-s ($color: $primary-500){
+  font-family: $headfont;
+  font-size: $font-m;
+  line-height: $lh-s;
+  letter-spacing: $lspace-xs;
+  color: $color;
+}
+@mixin h-xs ($color: $primary-500){
+  font-family: $headfont;
+  font-size: $font-s;
+  line-height: $lh-m;
+  letter-spacing: $lspace-m;
+  color: $color;
+}
+
+//subtitle text
+
+%subtitle {
+  font-family: $pfont;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: $lspace-xxl;
+}
+
+@mixin sub-lg ($color: $neutral-700){
+@extend %subtitle;
+  font-size: $font-xs;
+  line-height: $lh-xl;
+  color: $color;
+
+}
+
+@mixin sub-sm ($color: $neutral-700){
+  @extend %subtitle;
+  font-size: $font-xxs;
+  line-height: $lh-l;
+  color: $color;
+}
+
+//body text
+%bodyp {
+  font-family: $pfont;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: $lspace-l;
+}
+
+@mixin p-lg ($color: $neutral-700){
+  @extend %bodyp;
+  font-size: $font-xs;
+  line-height: $lh-xl;
+  color: $color;
+}
+
+@mixin p-sm ($color: $neutral-700){
+  @extend %bodyp;
+  font-size: $font-xxs;
+  line-height: $lh-l;
+  color: $color;
+  }
+
+//button text
+@mixin btn-h ($color: $white){
+  font-family: $headfont;
+  font-size: $font-xs;
+  line-height: $lh-xl;
+  letter-spacing: $lspace-xxl;
+  color: $color;
+}
+
+@mixin btn-p ($color: $white){
+  font-family: $pfont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: $font-xs1;
+  line-height: $lh-xl;
+  letter-spacing: $lspace-xxl;
+  color: $color;
+}
+
+// caption
+@mixin caption ($color: $neutral-700){
+  font-family: $pfont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-min;
+  line-height: $lh-xs;
+  letter-spacing: $lspace-xl;
+  color: $color;
+}
+
+//overline
+@mixin overline ($color: $neutral-700){
+  font-family: $headfont;
+  font-size: $font-micro;
+  line-height: $lh-xxl;
+  letter-spacing: $lspace-giga;
+  text-transform: uppercase;
+  color: $color;
+}
+
