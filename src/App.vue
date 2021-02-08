@@ -34,7 +34,6 @@ li {
   @include overline($primary-500);
 }
 
-
 #app {
   font-family: $pfont;
   -webkit-font-smoothing: antialiased;

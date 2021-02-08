@@ -1,15 +1,13 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg"
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
     :width="width"
     :height="height"
     viewBox="0 0 24 24"
     :aria-labelledby="iconName"
     role="presentation"
   >
-    <title
-      :id="iconName"
-      lang="en"
-    >{{ iconName }} icon</title>
+    <title :id="iconName" lang="en">{{ iconName }} icon</title>
     <g :fill="iconColor">
       <slot />
     </g>
@@ -21,7 +19,7 @@ export default {
   props: {
     iconName: {
       type: String,
-      default: 'box'
+      default: "box"
     },
     width: {
       type: [Number, String],
@@ -33,13 +31,10 @@ export default {
     },
     iconColor: {
       type: String,
-      default: 'currentColor'
+      default: "currentColor"
     }
   }
-}
-
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
