@@ -23,6 +23,7 @@
 </div>
     </div>
     <div class="sign-foo"><h1>sign-foo</h1></div>
+    <icon name="logo-apple"></icon><icon name="logo-android"></icon>
   </div>
 
   <div class="left-block">
@@ -41,7 +42,11 @@
 </template>
 
 <script>
+import Icon from '../../components/elements/Icon.vue';
+import '@/assets/fonts/CeraStencilPRO-Bold.woff';
+
 export default {
+  components: { Icon },
   name: "Login"
 };
 </script>
@@ -51,6 +56,8 @@ export default {
 
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/tokens.scss";
+
+
 
 .wrapper {
   display: flex;
