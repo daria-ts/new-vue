@@ -7,14 +7,14 @@ module.exports = {
 		},
 		name: "Точка склада",
 	},
-	//   css: {
-	//     loaderOptions: {
-	//       sass: {
-	//         prependData:
-	//           ' @import "@/global-styles/colors.scss", @import "@/global-styles/typography.scss", @import "@/global-styles/tokens.scss"'
-	//       }
-	//     }
-	//   },
+	css: {
+		loaderOptions: {
+			sass: {
+				prependData:
+					' @import "@/global-styles/colors.scss", @import "@/global-styles/tokens.scss"',
+			},
+		},
+	},
 
 	runtimeCompiler: true,
 };
