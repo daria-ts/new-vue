@@ -188,20 +188,36 @@ li {
     text-align: center;
     padding: 2.875rem 0rem 0.25rem 0rem;
     width: 100%;
+    animation: animh 1s ease-out 1 normal forwards;
+   z-index: $z-10;
+    @keyframes animh {
+       0% {transform: translateY(-4.08rem); opacity: 0;}
+       100% {transform: translateY(0rem); opacity: 1;}
+    }
   }
   .features {
     padding: 0rem 0rem 0rem -20rem;
     min-width: 43rem;
     animation: anim 20s linear infinite;
+    opacity: 0;
+    animation-delay:1.5s;
     @keyframes anim {
-       0% {transform: translateX(50%);}
-        80%,100%{transform: translateX(-100%);}
+        0% {transform: translateX(50%);opacity: 0;}
+        3%{opacity: 100;}
+        80%,100%{transform: translateX(-100%); opacity: 100;}
     }
   }
   .start-bg {
     width: 100%;
     background-position:left -4rem top -1.25rem;
     background-size: 50rem;
+    z-index: $z-zero;
+    border-width: 0px;
+    animation: animate-enter-1 0.8s ease-in 1 normal forwards;
+    @keyframes animate-enter-1 {
+       0% {transform: translateY(-4.08rem); opacity: 0;}
+       100% {transform: translateY(0rem); opacity: 1;}
+    }
   }
   .left-list {
     display: none;
