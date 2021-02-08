@@ -3,9 +3,24 @@
 
   <div class="wrapper">
     <div class="start-bg">
-      <div>
-        <h1>start-bg</h1>
-      </div>
+        <div class="features">
+            <div class="feature-red">ДОСТУП К СПЕЦПРЕДЛОЖЕНИЯМ</div>
+            <img
+                class="circle"
+                src="https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
+            />
+            <div class="feature">УДОБНАЯ ОПЛАТА</div>
+            <img
+                class="circle"
+                src="https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
+            />
+            <div class="feature">ДОКУМЕНТЫ</div>
+            <img
+                class="circle"
+                src="https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
+            />
+            <div class="feature">СИГНАЛИЗАЦИЯ</div>
+</div>
     </div>
     <div class="sign-foo"><h1>sign-foo</h1></div>
   </div>
@@ -54,9 +69,10 @@ export default {
 }
 //модуль с картинкой
 .start-bg {
-  background-image: url("/assets/bgimage.png");
-  height: 500px;
-  background-position: center;
+  background-image: url("https://thumb.tildacdn.com/tild6238-3239-4234-a465-303964373663/-/format/webp/bgImage.png");
+  background-size: 40rem;
+  background-position: left 65% top 15%;
+  
   background-repeat: no-repeat;
   align-items: flex-start;
   display: flex;
@@ -81,6 +97,29 @@ h4 {
   left: 0px;
   top: 0px;
 }
+
+//features
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    animation: animate-enter 0.5s ease-in-out 0.5s 1 normal forwards;
+    width: 43rem;
+    min-width: 36rem;
+    padding: 0.1rem  2rem 0rem 4.5625rem ;
+    @keyframes animate-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+}
+
+
 // список фич
 ul {
   display: flex;
@@ -124,8 +163,14 @@ li {
   h4 {
     padding: 2.875rem 3.75rem 0.25rem 10.375rem;
   }
+  .features {
+    padding: 0rem 0rem 0rem 10.375rem;
+    width: 48.5rem;
+  }
   .start-bg {
     width: 80%;
+    background-size: 50rem;
+    
   }
   .sign-foo {
     width: 69%;
@@ -144,8 +189,19 @@ li {
     padding: 2.875rem 0rem 0.25rem 0rem;
     width: 100%;
   }
+  .features {
+    padding: 0rem 0rem 0rem -20rem;
+    min-width: 43rem;
+    animation: anim 20s linear infinite;
+    @keyframes anim {
+       0% {transform: translateX(50%);}
+        80%,100%{transform: translateX(-100%);}
+    }
+  }
   .start-bg {
     width: 100%;
+    background-position:left -4rem top -1.25rem;
+    background-size: 50rem;
   }
   .left-list {
     display: none;

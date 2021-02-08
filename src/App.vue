@@ -27,6 +27,14 @@ li {
   @include p-sm;
 }
 
+.feature {
+  @include overline($neutral-700);
+}
+.feature-red {
+  @include overline($primary-500);
+}
+
+
 #app {
   font-family: $pfont;
   -webkit-font-smoothing: antialiased;
