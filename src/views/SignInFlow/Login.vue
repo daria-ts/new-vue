@@ -1,7 +1,7 @@
 <template>
   <h4>Что дает личный кабинет?</h4>
 
-  <div class="wrapper">
+    <div class="wrapper">
     <div class="start-bg">
       <div class="features">
         <div class="feature-red">ДОСТУП К СПЕЦПРЕДЛОЖЕНИЯМ</div>
@@ -15,6 +15,7 @@
           src="https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
         />
         <div class="feature">ДОКУМЕНТЫ</div>
+        
         <img
           class="circle"
           src="https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
@@ -24,6 +25,7 @@
     </div>
     <div class="sign-foo"><h1>sign-foo</h1></div>
     <icon name="logo-apple"></icon><icon name="logo-android"></icon>
+    
   </div>
 
   <div class="left-block">
@@ -43,7 +45,9 @@
 
 <script>
 import Icon from "../../components/elements/Icon.vue";
+
 import "@/assets/fonts/CeraStencilPRO-Bold.woff";
+
 
 export default {
   components: { Icon },

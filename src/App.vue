@@ -7,6 +7,7 @@
 @import "@/global-styles/typography.scss";
 @import "@/global-styles/tokens.scss";
 
+
 body {
   margin: 0px;
   background-color: $neutral-010;
