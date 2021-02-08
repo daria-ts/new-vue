@@ -200,7 +200,7 @@ li {
     min-width: 43rem;
     animation: anim 20s linear infinite;
     opacity: 0;
-    animation-delay:1.5s;
+    animation-delay:1.3s;
     @keyframes anim {
         0% {transform: translateX(50%);opacity: 0;}
         3%{opacity: 100;}
