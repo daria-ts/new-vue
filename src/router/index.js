@@ -5,6 +5,7 @@ import Login from "../views/SignInFlow/Login.vue";
 import Register from "../views/SignInFlow/Register.vue";
 import Recover from "../views/SignInFlow/Recover.vue";
 import TestOne from "../views/testing/test-one.vue";
+import TestTwo from "../views/testing/test-two.vue";
 
 const routes = [
 	{
@@ -12,10 +13,16 @@ const routes = [
 		name: "home",
 		component: Home,
 	},
+
 	{
 		path: "/about",
 		name: "about",
 		component: About,
+	},
+	{
+		path: "/user/:name",
+		name: "User",
+		component: User,
 	},
 	{
 		path: "/login",
@@ -36,6 +43,15 @@ const routes = [
 		path: "/test",
 		name: "test",
 		component: TestOne,
+	},
+	{
+		path: "/test-two",
+		name: "test-two",
+		component: TestTwo,
+	},
+	{
+		path: "/:catchAll(.*)",
+		component: NotFound,
 	},
 ];
 
