@@ -6,13 +6,15 @@
 </template>
 
 <script>
+import Icon from "../../components/elements/Icon.vue";
+
 export default {
   data() {
     return {
       firstName: 'Пантелеймон'
     };
   },
-  
+  components: { Icon },
   name: "TestOne"
 };
 </script>
