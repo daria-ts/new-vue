@@ -19,8 +19,8 @@ export default {
   props: {
     viewBox: { type: String, default: '0 0 24 24'},
     iconName: { type: String, default: ''},
-    width: { type: [Number, String], default: 18 },
-    height: {type: [Number, String], default: 18 },
+    width: { type: [Number, String], default: 24 },
+    height: {type: [Number, String], default: 24 },
     iconColor: {type: String, default: 'currentColor'}
   }
 };
