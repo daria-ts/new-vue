@@ -20,7 +20,9 @@ h1 {
 h4 {
   @include overline($neutral-700);
 }
-
+ h3 {
+   @include sub-sm
+ }
 p {
   @include p-lg;
 }

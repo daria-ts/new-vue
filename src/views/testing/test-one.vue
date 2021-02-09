@@ -1,7 +1,10 @@
 <template>
    <header>
+     <div class="header">
      <icon name="app-logo"/>
-      <h1>Vue Events</h1>
+      <h3 class="header-text">Здравствуйте, {{firstName}}!</h3>
+     </div>
+     <hr />
     </header>
 </template>
 
@@ -19,35 +22,46 @@ export default {
 };
 </script>
 
+//TODO: потом firstname должно подтягиваться из базы в соотношении с логином
+
+
 <style lang="scss" scoped>
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/tokens.scss";
-
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $secondary-100;
-
+header{
+  width: auto;
+  height: 5rem;
+  max-width: 73.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:$neutral-010;
+  
 }
 
-button{
-  
-  margin: 1rem;
-  width: 100px;
-  height: 3rem;
-  border-radius: $radi-m;
-  border: 1px solid $neutral-200;
- 
-  
-  
+  .header {
+    padding: 1.6rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    
 
-}
-input{
-  height: 2rem;
-  margin: 1rem;
-  border-radius: $radi-m;
-  border: 1px solid $neutral-200;
+  }
+  .header-text{
+    padding: 0.8rem;
+    width: 17.5rem;
+    text-align: end;
+  }
+  hr{
+    border: none; 
+    color: $neutral-200; 
+    background-color:$neutral-200; 
+    height: 1px;
+    float: right;
+    width: calc(100% - 4.08rem);
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+  }
 
-}
 </style>
