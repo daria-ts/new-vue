@@ -15,7 +15,7 @@ import Icon from "../../components/elements/Icon.vue";
 
 export default {
   components: { Icon, HeadInfo },
-  name: "TestOne"
+  name: "Header"
 };
 </script>
 
