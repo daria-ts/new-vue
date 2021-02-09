@@ -10,8 +10,8 @@
 
 <script>
 
-import HeadInfo from '../../components/elements/head-info.vue';
-import Icon from "../../components/elements/Icon.vue";
+import HeadInfo from '@/components/elements/head-info.vue';
+import Icon from "@/components/elements/Icon.vue";
 
 
 export default {
