@@ -4,38 +4,44 @@ import About from "../views/About.vue";
 import Login from "../views/SignInFlow/Login.vue";
 import Register from "../views/SignInFlow/Register.vue";
 import Recover from "../views/SignInFlow/Recover.vue";
+import TestOne from "../views/testing/test-one.vue";
 
 const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "about",
-    component: About
-  },
-  {
-    path: "/login",
-    name: "login",
-    component: Login
-  },
-  {
-    path: "/register",
-    name: "register",
-    component: Register
-  },
-  {
-    path: "/recover",
-    name: "recover",
-    component: Recover
-  }
+	{
+		path: "/",
+		name: "home",
+		component: Home,
+	},
+	{
+		path: "/about",
+		name: "about",
+		component: About,
+	},
+	{
+		path: "/login",
+		name: "login",
+		component: Login,
+	},
+	{
+		path: "/register",
+		name: "register",
+		component: Register,
+	},
+	{
+		path: "/recover",
+		name: "recover",
+		component: Recover,
+	},
+	{
+		path: "/test",
+		name: "test",
+		component: TestOne,
+	},
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+	history: createWebHistory(process.env.BASE_URL),
+	routes,
 });
 
 export default router;

@@ -43,7 +43,7 @@ export default {
       this.counter = this.counter - num;
     }
   },
-  name: "Recover"
+  name: "TestOne"
 };
 </script>
 
