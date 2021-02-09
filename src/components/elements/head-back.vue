@@ -23,6 +23,7 @@ export default {
 
 //TODO: имя страницы -- показывается только на второстепенных страницах
 //TODO: сообщения -- иконки-- должны быть связаны с баннером по цвету
+//TODO: обратная ссылка 
 <style lang="scss" scoped>
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/tokens.scss";
