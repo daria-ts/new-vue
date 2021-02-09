@@ -2,7 +2,10 @@
    <header>
      <div class="header">
      <icon name="app-logo"/>
+     <div class="msg-box">
       <h3 class="header-text">Здравствуйте, {{firstName}}!</h3>
+      <icon-base><check /></icon-base>
+     </div>
      </div>
      <hr />
     </header>
@@ -10,14 +13,17 @@
 
 <script>
 import Icon from "../../components/elements/Icon.vue";
+import IconBase from '../../components/elements/IconBase.vue';
+import Check from "../../components/elements/icons/check.vue";
 
 export default {
   data() {
     return {
-      firstName: 'Пантелеймон'
+      firstName: 'Пантелеймон',
+      iconName: 'check'
     };
   },
-  components: { Icon },
+  components: { Icon, IconBase,Check },
   name: "TestOne"
 };
 </script>
@@ -35,7 +41,7 @@ header{
   margin-left: auto;
   margin-right: auto;
   background-color:$neutral-010;
-  
+
 }
 
   .header {
@@ -51,6 +57,9 @@ header{
     width: 17.5rem;
     text-align: end;
   }
+  msg-box{
+    display: flex;
+  }
   hr{
     border: none; 
     color: $neutral-200; 
@@ -62,6 +71,10 @@ header{
     margin-left: auto;
     margin-right: auto;
     padding-left: 2rem;
+  }
+
+  IconBase {
+iconColor:  '$primary-500'
   }
 
 </style>

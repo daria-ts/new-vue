@@ -16,13 +16,20 @@
 
 <script>
 export default {
+  // name: 'IconBase',
   props: {
     viewBox: { type: String, default: '0 0 24 24'},
     iconName: { type: String, default: 'edit'},
     width: { type: [Number, String], default: 24 },
     height: {type: [Number, String], default: 24 },
-    iconColor: {type: String, default: '$primary-500'}
-  }
+    iconColor: {type: String, default: '$primary-500'},
+    // path: String
+    // },
+    // computed: {
+    // path() {
+    //   return icons[this.name];
+    // },
+    }
 };
 </script>
 
