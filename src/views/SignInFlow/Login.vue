@@ -13,6 +13,7 @@
         <img v-bind:src="circleUrl" />
         <div class="feature">{{featureD}}</div>
       </div>
+      
     </div>
     <div class="sign-foo">
         <div class="install-padding">
@@ -26,7 +27,9 @@
         </a>
     </div>
     
-    
+//TODO добавить ссылки
+
+
     
   </div>
 
@@ -106,6 +109,7 @@ export default {
     }
     
 }
+//TODO зона наведения
 .install-padding {
     margin-right: 5%;
 }
