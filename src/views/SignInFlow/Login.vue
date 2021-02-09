@@ -1,30 +1,32 @@
 <template>
-  <h4>Что дает личный кабинет?</h4>
+  <h4>{{question}}</h4>  
 
     <div class="wrapper">
     <div class="start-bg">
+
       <div class="features">
-        <div class="feature-red">ДОСТУП К СПЕЦПРЕДЛОЖЕНИЯМ</div>
-        <img
-          class="circle"
-          src="https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
-        />
-        <div class="feature">УДОБНАЯ ОПЛАТА</div>
-        <img
-          class="circle"
-          src="https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
-        />
-        <div class="feature">ДОКУМЕНТЫ</div>
-        
-        <img
-          class="circle"
-          src="https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
-        />
-        <div class="feature">СИГНАЛИЗАЦИЯ</div>
+        <div class="feature-red">{{featureA}}</div>
+        <img v-bind:src="circleUrl" />
+        <div class="feature">{{featureB}}</div>
+        <img v-bind:src="circleUrl" />
+        <div class="feature">{{featureC}}</div>
+        <img v-bind:src="circleUrl" />
+        <div class="feature">{{featureD}}</div>
       </div>
     </div>
-    <div class="sign-foo"><h1>sign-foo</h1></div>
-    <icon name="logo-apple"></icon><icon name="logo-android"></icon>
+    <div class="sign-foo">
+        <div class="install-padding">
+            <div class="feature">{{installto}}</div>
+        </div>
+        <a href="#" class="os-icon">
+            <icon name="logo-apple"></icon>
+        </a>
+        <a href="#" class="os-icon">
+            <icon name="logo-android"></icon>
+        </a>
+    </div>
+    
+    
     
   </div>
 
@@ -46,10 +48,22 @@
 <script>
 import Icon from "../../components/elements/Icon.vue";
 
+
 import "@/assets/fonts/CeraStencilPRO-Bold.woff";
 
 
 export default {
+    data() {
+    return {
+        question:'ЧТО ДАЕТ ЛИЧНЫЙ КАБИНЕТ?',
+        featureA:'ДОСТУП К СПЕЦПРЕДЛОЖЕНИЯМ',
+        featureB:'УДОБНАЯ ОПЛАТА',
+        featureC:'ДОКУМЕНТЫ',
+        featureD:'СИГНАЛИЗАЦИЯ',
+        installto:'УСТАНОВИТЬ НА',
+        circleUrl: 'https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg'
+    }
+},
   components: { Icon },
   name: "Login"
 };
@@ -72,9 +86,28 @@ export default {
 }
 //2 кнопки
 .sign-foo {
-  height: 4.08rem;
-  width: 67%;
-  text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 4.08rem;
+    width: 70%;
+}
+.os-icon {
+    display: flex;
+    width: 15%;
+    min-width: 5.8rem;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: solid $neutral-200;
+    border-width: 0px 0px 0px 1px;
+    :hover {
+        fill:$primary-500;
+    }
+    
+}
+.install-padding {
+    margin-right: 5%;
 }
 //модуль с картинкой
 .start-bg {
@@ -180,14 +213,12 @@ li {
     background-size: 50rem;
   }
   .sign-foo {
-    width: 69%;
+    width: 70%;
   }
   .left-block {
     padding-right: 31%;
   }
-  .left-list {
-    max-width: 35rem;
-  }
+  
 }
 
 @media (max-width: $br-sm) {
@@ -253,7 +284,15 @@ li {
   .sign-foo {
     width: 100%;
     text-align: center;
+        border: solid $neutral-200;
+  border-width: 1px 0px 0px 0px;
   }
+    .os-icon {
+        width: 50%;
+  }
+  .install-padding {
+    display: none;
+}
   .left-block {
     display: none;
   }
