@@ -1,48 +1,18 @@
 <template>
    <header>
+     <icon name="app-logo"/>
       <h1>Vue Events</h1>
     </header>
-    <section id="events">
-      <h2>Events in Action</h2>
-      <button v-on:click="add(30)">Add</button>
-      <button v-on:click="funcName(5)">Remove</button><br>
-      <input type="text" v-on:input="setName($event,'Зорина')" v-on:keyup.enter="confirmName">
-      <p>Привет, {{confirmedName }}!</p>
-      <p>Result: {{ counter }}</p>
-      <form v-on:submit.prevent="submitForm">
-        <input type="text">
-
-        <button></button>
-      </form>
-    </section>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      counter: 0,
-      name: '',
-      confirmedName: ''
+      firstName: 'Пантелеймон'
     };
   },
-  methods: { 
-    confirmName(){
-      this.confirmedName = this.name;
-    },
-    submitForm() {
-      alert('Спасибо!');
-    },
-    setName(event, lastName) {
-      this.name = event.target.value + ' ' + lastName; 
-    },
-    add (num) {
-      this.counter = this.counter + num;
-    },
-    funcName (num) {
-      this.counter = this.counter - num;
-    }
-  },
+  
   name: "TestOne"
 };
 </script>
