@@ -25,14 +25,9 @@
         <a href="#" class="os-icon">
             <icon name="logo-android"></icon>
         </a>
-    </div>
-    
-//TODO добавить ссылки
-
-
-    
+    </div>  
   </div>
-
+//TODO: добавить ссылки
   <div class="left-block">
     Личный кабинет создан по&nbsp;технологии <nobr>PWA-приложения:</nobr>
   </div>
@@ -47,6 +42,7 @@
     </ul>
   </div>
 </template>
+
 
 <script>
 import Icon from "../../components/elements/Icon.vue";
@@ -106,10 +102,11 @@ export default {
     border-width: 0px 0px 0px 1px;
     :hover {
         fill:$primary-500;
+        
     }
     
 }
-//TODO зона наведения
+//TODO: зона наведения
 .install-padding {
     margin-right: 5%;
 }
