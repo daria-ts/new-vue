@@ -2,33 +2,24 @@
    <header>
      <div class="header">
      <icon name="app-logo"/>
-     <div class="msg-box">
-      <h3 class="header-text">Здравствуйте, {{firstName}}!</h3>
-      <icon-base><check /></icon-base>
-     </div>
+     <head-info></head-info>
      </div>
      <hr />
     </header>
 </template>
 
 <script>
+import HeadInfo from '../../components/elements/head-info.vue';
 import Icon from "../../components/elements/Icon.vue";
-import IconBase from '../../components/elements/IconBase.vue';
-import Check from "../../components/elements/icons/check.vue";
+
 
 export default {
-  data() {
-    return {
-      firstName: 'Пантелеймон',
-      iconName: 'check'
-    };
-  },
-  components: { Icon, IconBase,Check },
+  components: { Icon, HeadInfo },
   name: "TestOne"
 };
 </script>
 
-//TODO: потом firstname должно подтягиваться из базы в соотношении с логином
+
 
 
 <style lang="scss" scoped>
@@ -52,14 +43,8 @@ header{
     
 
   }
-  .header-text{
-    padding: 0.8rem;
-    width: 17.5rem;
-    text-align: end;
-  }
-  msg-box{
-    display: flex;
-  }
+  
+  
   hr{
     border: none; 
     color: $neutral-200; 
@@ -73,8 +58,14 @@ header{
     padding-left: 2rem;
   }
 
-  IconBase {
-iconColor:  '$primary-500'
+  
+  @media (min-width: $br-md){
+    hr{
+      width: 110%;
+      padding-left: -2rem;
+      float: none;
+    }
+  
   }
 
 </style>
