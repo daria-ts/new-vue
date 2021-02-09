@@ -9,6 +9,7 @@
 </template>
 
 <script>
+
 import HeadInfo from '../../components/elements/head-info.vue';
 import Icon from "../../components/elements/Icon.vue";
 

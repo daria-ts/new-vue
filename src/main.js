@@ -6,9 +6,10 @@ import store from "./store";
 import "./global-styles/colors.scss";
 import "./global-styles/tokens.scss";
 import IconBase from "@/components/elements/IconBase.vue";
+import Icon from "@/components/elements/Icon.vue";
 
 createApp(App)
-	.use(IconBase, { tagName: "icon-base" })
+	.use(Icon, IconBase, { tagName: "icon-base" })
 	.use(store)
 	.use(router)
 	.mount("#app");
