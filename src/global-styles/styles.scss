@@ -48,6 +48,11 @@ background: $primary-500;
     color: $white;
 }
 
+@mixin btn-priority-hight {
+    background: $neutral-700;
+        color: $white;
+    }
+
 //animations
 
 
