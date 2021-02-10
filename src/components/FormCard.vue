@@ -1,14 +1,16 @@
 <template>
     <div class="form-card">
-        <div class="logo-block">logo-block</div>
+        <LogoFull bg="logo-on-white"></LogoFull>
         <div class="form-block">form-block</div>
         <div class="link-block">logo-block</div>
     </div>
 </template>
 
 <script>
+import LogoFull from "@/components/elements/LogoFull.vue";
+
 export default {
-     
+        components: { LogoFull },
         name: "FormCard"
 }
 </script>

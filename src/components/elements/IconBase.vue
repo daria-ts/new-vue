@@ -13,7 +13,7 @@
     </g>
   </svg>
 </template>
-
+//TODO: изменить размер иконок на rem
 <script>
 export default {
   // name: 'IconBase',
@@ -33,4 +33,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>
