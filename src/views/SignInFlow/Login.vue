@@ -1,9 +1,10 @@
 <template>
+  <FormCard />
   <h4>{{question}}</h4>  
  
 
     <div class="wrapper">
-       <FormCard />
+       
     <div class="start-bg">
 
       <div class="features">

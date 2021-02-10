@@ -32,19 +32,19 @@ body {
   width:14.75rem ;
   height: 22.375rem;
   z-index: $z-10;
-  margin-top: 4rem;
-  margin-left: 58%;
+  margin-top: 7.4rem;
+  margin-left: 15%;
   margin-right: 3rem;
-  background-color: rgba($white, .9);
+  background-color: rgba($white, .92);
   box-shadow: $card-shadow;
   border-radius: $radi-m;
    animation: animcardstart 1.3s ease-in-out 1 normal forwards;
   @keyframes animcardstart {
       0% {
-        transform: translateX(8rem);
+        transform: translateX(-12rem);
         opacity: 0;
       }
-      20% {transform: translateX(8rem);
+      20% {transform: translateX(-12rem);
         opacity: 0;
         }
       100% {
@@ -61,16 +61,18 @@ body {
 
 @media (min-width: $br-md) {
   .form-card {
-    margin-left: 66%;
+      margin-top: 12rem;
+    margin-left: 22%;
   }}
   @media (max-width: $br-sm) {
    .form-card {
-  margin-top: 30%;
+  margin-top: 38%;
   margin-left: 5%;
   width: -webkit-calc(90% - 4.5rem);
   width: calc(90% - 4.5rem);
   height: -webkit-calc(60% - 4.5rem);
   height: calc(60% - 4.5rem);
+  min-height: 25rem ;
   
   @keyframes animcardstart {
       0% {
