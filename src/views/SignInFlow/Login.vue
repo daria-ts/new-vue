@@ -1,9 +1,9 @@
 <template>
   <h4>{{question}}</h4>  
-  
+ 
 
     <div class="wrapper">
-      <div class="form-card"></div>
+       <FormCard/>
     <div class="start-bg">
 
       <div class="features">
@@ -48,6 +48,7 @@
 // TODO: добавить ссылки  
 <script>
 import Icon from "../../components/elements/Icon.vue";
+import FormCard from "../../components/FormCard.vue";
 
 
 export default {
@@ -62,7 +63,7 @@ export default {
         circleUrl: 'https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg'
     }
 },
-  components: { Icon },
+  components: { Icon, FormCard },
   name: "Login"
 };
 </script>
@@ -73,33 +74,7 @@ export default {
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/tokens.scss";
 
-.form-card {
-  position: absolute;
-  width:19.25rem ;
-  height: 26.875rem;
-  z-index: $z-10;
-  margin-top: 4rem;
-  margin-left: 58%;
-  margin-right: 3rem;
-  background-color:$white ;
-  box-shadow: $card-shadow;
-  border-radius: $radi-m;
-  opacity: $bg-opasity;
-   animation: animcardstart 1.3s ease-in-out 1 normal forwards;
-  @keyframes animcardstart {
-      0% {
-        transform: translateX(8rem);
-        opacity: 0;
-      }
-      20% {transform: translateX(8rem);
-        opacity: 0;
-        }
-      100% {
-        transform: translateX(0rem);
-        opacity: 1;
-      }
-    }
-}
+
 
 .wrapper {
   display: flex;
@@ -229,9 +204,7 @@ li {
 }
 
 @media (min-width: $br-md) {
-  .form-card {
-    margin-left: 66%;
-  }
+  
   h4 {
     padding: 2.875rem 3.75rem 0.25rem 10.375rem;
   }
@@ -253,28 +226,7 @@ li {
 }
 
 @media (max-width: $br-sm) {
-   .form-card {
-  margin-top: 30%;
-  margin-left: 5%;
-  width: 90%;
-  height: 60%;
-  
-  @keyframes animcardstart {
-      0% {
-        transform: translateY(8rem);
-        opacity: 0;
-      }
-      20% {transform: translateY(8rem);
-        opacity: 0;
-        }
-      100% {
-        transform: translateY(0rem);
-        opacity: 1;
-      }
-    }
-  /* margin-left: calc(50vh - 19.25rem); */
-  
-  }
+ 
   h4 {
     text-align: center;
     padding: 2.875rem 0rem 0.25rem 0rem;
