@@ -2,7 +2,17 @@
 @import "./colors.scss";
 @import "./typography.scss";
 
+
+
 @mixin fixed-login {
     display: flex;
     width: 14.75rem;
+}
+
+@mixin card-wrapper {
+    background: $white;
+    box-shadow: $card-shadow;
+    border-radius: $radi-m;
+    padding: $space-l;
+    display: flex;
 }

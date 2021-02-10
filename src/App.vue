@@ -4,10 +4,10 @@
 
 <style lang="scss">
 @import "@/global-styles/styles.scss";
-@import "@/global-styles/typography.scss";
 
 
-//FIXME: из-за кастомного шрифта стили текста работают только если прописываю тут
+
+
 body {
   margin: 0px;
   background-color: $neutral-010;

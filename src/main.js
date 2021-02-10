@@ -3,8 +3,6 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import "./global-styles/colors.scss";
-import "./global-styles/tokens.scss";
 import "./global-styles/styles.scss";
 import IconBase from "@/components/elements/IconBase.vue";
 import Icon from "@/components/elements/Icon.vue";

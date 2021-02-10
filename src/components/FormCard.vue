@@ -22,22 +22,18 @@ body {
     background: transparent;
 }
 .form-card {
-    
+  @include card-wrapper;
   position: absolute;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: $space-l;
-  width:14.75rem ;
+  align-items: center; 
+  width:14.75rem;
   height: 22.375rem;
   z-index: $z-10;
   margin-top: 7.4rem;
   margin-left: 15%;
   margin-right: 3rem;
   background-color: rgba($white, .92);
-  box-shadow: $card-shadow;
-  border-radius: $radi-m;
   animation: animcardstart 1.3s ease-in-out 1 normal forwards;
   @keyframes animcardstart {
       0% {
