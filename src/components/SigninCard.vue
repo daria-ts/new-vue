@@ -10,7 +10,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/global-styles/colors.scss";
-@import "@/global-styles/typography.scss";
 @import "@/global-styles/tokens.scss";
 
 .container {
