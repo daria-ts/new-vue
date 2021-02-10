@@ -30,13 +30,14 @@ export default {
     @include fixed-login;
     justify-content: space-between;
 }
-//FIXME: не работают стили наведения
+
 .caption {
     text-decoration: none;
     color: $primary-500;
-    :hover {
+    
+}
+.caption:hover {
         text-decoration-line: underline;
     }
-}
 
 </style>

@@ -5,8 +5,7 @@
 <style lang="scss">
 @import "@/global-styles/styles.scss";
 
-
-
+//global typography
 
 body {
   margin: 0px;

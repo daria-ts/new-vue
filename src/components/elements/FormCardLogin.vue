@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <h2>ВХОД ДЛЯ КЛИЕНТОВ</h2>
-        <form action="">
+        <form class="login" action="">
             <input type="text" name="" id="">
             <input type="text" name="" id="">
             <button>Войти</button>
@@ -20,13 +20,21 @@ export default {
 
 //FIXME: не работает регистрация стилей -- приходится каждый раз сюда вставлять 😏
 .wrapper {
-    display: flex;
+    @include fixed-login;
     flex-direction: column;
-    width: 14.75rem;
+    height: 15.5rem;
     justify-content: space-between;
+    align-items: flex-start;
 }
 h2 {
     color: $neutral-300;
    
 }
+.login {
+    @include fixed-login;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
 </style>
