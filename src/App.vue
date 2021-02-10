@@ -30,7 +30,7 @@ li {
   @include p-sm;
 }
 .caption{
-  @include caption;
+  @include caption ($neutral-700);
 }
 .feature {
   @include overline($neutral-700);

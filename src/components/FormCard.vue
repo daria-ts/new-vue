@@ -2,15 +2,15 @@
     <div class="form-card">
         <LogoFull bg="logo-on-white"></LogoFull>
         <div class="form-block">form-block</div>
-        <div class="link-block">logo-block</div>
+        <FormCardLinks />
     </div>
 </template>
 
 <script>
 import LogoFull from "@/components/elements/LogoFull.vue";
-
+import FormCardLinks from "@/components/elements/FormCardLinks.vue";
 export default {
-        components: { LogoFull },
+        components: { LogoFull, FormCardLinks },
         name: "FormCard"
 }
 </script>
@@ -51,18 +51,12 @@ export default {
       }
     }
 }
-.logo-block{
-    background: $secondary-100;
-    
-}
+
 .form-block{
     background: $secondary-100;
     
 }
-.link-block{
-    background: $secondary-100;
-    
-}
+
 @media (min-width: $br-md) {
   .form-card {
     margin-left: 66%;
