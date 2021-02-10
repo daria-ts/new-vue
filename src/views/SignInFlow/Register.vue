@@ -1,9 +1,13 @@
 <template>
-  <div></div>
+  <UnregisteredUserBg />
 </template>
 
 <script>
+import UnregisteredUserBg from "@/components/UnregisteredUserBg.vue";
+
 export default {
+  
+  components: { UnregisteredUserBg },
   name: "Register"
 };
 </script>
