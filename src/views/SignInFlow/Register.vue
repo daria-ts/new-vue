@@ -13,3 +13,4 @@ export default {
 </script>
 
 <style lang="scss" scoped></style>
+//IMPROVE: по идее, не нужно делать несколько страниц -- достаточно перерисовать только форму
