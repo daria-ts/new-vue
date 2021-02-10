@@ -45,7 +45,7 @@
   </div>
 </template>
 
-// TODO: добавить ссылки  
+// TODO: добавить ссылки -- лучше всплывашки подсказки
 <script>
 import Icon from "../../components/elements/Icon.vue";
 import FormCard from "../../components/FormCard.vue";

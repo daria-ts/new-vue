@@ -1,5 +1,9 @@
 <template>
-    <div><div class="form-card"></div></div>
+    <div class="form-card">
+        <div class="logo-block">logo-block</div>
+        <div class="form-block">form-block</div>
+        <div class="link-block">logo-block</div>
+    </div>
 </template>
 
 <script>
@@ -15,8 +19,13 @@ export default {
 
 .form-card {
   position: absolute;
-  width:19.25rem ;
-  height: 26.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-l;
+  width:14.75rem ;
+  height: 22.375rem;
   z-index: $z-10;
   margin-top: 4rem;
   margin-left: 58%;
@@ -40,6 +49,18 @@ export default {
       }
     }
 }
+.logo-block{
+    background: $secondary-100;
+    
+}
+.form-block{
+    background: $secondary-100;
+    
+}
+.link-block{
+    background: $secondary-100;
+    
+}
 @media (min-width: $br-md) {
   .form-card {
     margin-left: 66%;
@@ -48,8 +69,10 @@ export default {
    .form-card {
   margin-top: 30%;
   margin-left: 5%;
-  width: 90%;
-  height: 60%;
+  width: -webkit-calc(90% - 4.5rem);
+  width: calc(90% - 4.5rem);
+  height: -webkit-calc(60% - 4.5rem);
+  height: calc(60% - 4.5rem);
   
   @keyframes animcardstart {
       0% {
