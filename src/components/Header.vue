@@ -2,7 +2,7 @@
    <header>
      <div class="header">
      <icon name="app-logo"/>
-     <head-info></head-info>
+     <HeadInfo></HeadInfo>
      </div>
      <hr />
     </header>
@@ -10,7 +10,7 @@
 
 <script>
 
-import HeadInfo from '@/components/elements/head-info.vue';
+import HeadInfo from '@/components/elements/HeadInfo.vue';
 import Icon from "@/components/elements/Icon.vue";
 
 

@@ -2,14 +2,14 @@
    <header>
      <div class="header">
      <icon name="app-logo"/>
-     <head-back></head-back>
+     <HeadBack></HeadBack>
      </div>
      <hr />
     </header>
 </template>
 
 <script>
-import headBack from '../../components/elements/head-back.vue';
+import headBack from '../../components/elements/HeadBack.vue';
 import Icon from "../../components/elements/Icon.vue";
 
 
