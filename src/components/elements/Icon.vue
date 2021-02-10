@@ -47,8 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/global-styles/colors.scss";
-@import "@/global-styles/tokens.scss";
+@import "@/global-styles/styles.scss";
 svg {
   fill: $neutral-400;
 }

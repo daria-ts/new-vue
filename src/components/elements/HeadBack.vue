@@ -25,8 +25,8 @@ export default {
 //TODO: сообщения -- иконки-- должны быть связаны с баннером по цвету
 //TODO: обратная ссылка 
 <style lang="scss" scoped>
-@import "@/global-styles/colors.scss";
-@import "@/global-styles/tokens.scss";
+@import "@/global-styles/styles.scss";
+
 .header-text{
     padding-top: 1rem;
     padding-left: 1rem;

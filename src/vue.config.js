@@ -11,7 +11,7 @@ module.exports = {
 		loaderOptions: {
 			sass: {
 				prependData:
-					' @import "@/global-styles/colors.scss", @import "@/global-styles/tokens.scss"',
+					' @import "@/global-styles/colors.scss", @import "@/global-styles/styles.scss", @import "@/global-styles/tokens.scss"',
 			},
 		},
 	},

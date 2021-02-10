@@ -1,0 +1,7 @@
+@import "./tokens.scss";
+@import "./colors.scss";
+
+@mixin fixed-login {
+    display: flex;
+    width: 14.75rem;
+}

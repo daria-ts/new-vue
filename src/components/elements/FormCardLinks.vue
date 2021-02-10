@@ -24,11 +24,10 @@ export default {
 //TODO: сделать смену блока -- в зависимости от страницы и разный текст местами типа if current page '/'name === link-name hide link
 
 <style lang="scss" scoped>
-@import "@/global-styles/colors.scss";
-@import "@/global-styles/tokens.scss";
+
+@import "@/global-styles/styles.scss";
 .link-block{
-    display: flex;
-    width: 14.75rem;
+    @include fixed-login;
     justify-content: space-between;
 }
 //FIXME: не работают стили наведения

@@ -24,8 +24,8 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "@/global-styles/colors.scss";
-@import "@/global-styles/tokens.scss";
+@import "@/global-styles/styles.scss";
+
 header{
   width: auto;
   height: 5rem;

@@ -24,8 +24,8 @@ export default {
 //TODO: потом firstname должно подтягиваться из базы в соотношении с логином
 //TODO: сообщения -- иконки-- должны быть связаны с баннером по цвету. Если сообщений нет - то без иконки
 <style lang="scss" scoped>
-@import "@/global-styles/colors.scss";
-@import "@/global-styles/tokens.scss";
+@import "@/global-styles/styles.scss";
+
 .header-text{
     padding: 0.8rem;
     width: 17.5rem;

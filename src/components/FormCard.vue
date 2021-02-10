@@ -1,7 +1,7 @@
 <template>
     <div class="form-card">
         <LogoFull bg="logo-on-white"></LogoFull>
-        <div class="form-block">form-block</div>
+        <FormCardLogin />
         <FormCardLinks />
     </div>
 </template>
@@ -9,15 +9,15 @@
 <script>
 import LogoFull from "@/components/elements/LogoFull.vue";
 import FormCardLinks from "@/components/elements/FormCardLinks.vue";
+import FormCardLogin from "@/components/elements/FormCardLogin.vue";
 export default {
-        components: { LogoFull, FormCardLinks },
+        components: { LogoFull, FormCardLinks, FormCardLogin },
         name: "FormCard"
 }
 </script>
 
 <style lang="scss" scoped>
-@import "@/global-styles/colors.scss";
-@import "@/global-styles/tokens.scss";
+@import "@/global-styles/styles.scss";
 body {
     background: transparent;
 }
@@ -38,7 +38,7 @@ body {
   background-color: rgba($white, .92);
   box-shadow: $card-shadow;
   border-radius: $radi-m;
-   animation: animcardstart 1.3s ease-in-out 1 normal forwards;
+  animation: animcardstart 1.3s ease-in-out 1 normal forwards;
   @keyframes animcardstart {
       0% {
         transform: translateX(-12rem);

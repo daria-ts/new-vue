@@ -3,11 +3,11 @@
 </template>
 
 <style lang="scss">
-@import "@/global-styles/colors.scss";
+@import "@/global-styles/styles.scss";
 @import "@/global-styles/typography.scss";
-@import "@/global-styles/tokens.scss";
 
 
+//FIXME: из-за кастомного шрифта стили текста работают только если прописываю тут
 body {
   margin: 0px;
   background-color: $neutral-010;
@@ -16,13 +16,17 @@ body {
 h1 {
   @include h-m($primary-500);
 }
+h2 {
+   @include sub-lg
+}
 
+h3 {
+   @include sub-sm
+}
 h4 {
   @include overline($neutral-700);
 }
- h3 {
-   @include sub-sm
- }
+
 p {
   @include p-lg;
 }
