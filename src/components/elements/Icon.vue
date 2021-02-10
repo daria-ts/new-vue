@@ -2,9 +2,9 @@
   <div>
     <svg
       v-if="name === 'logo-apple'"
-      width="$space-m"
-      height="$space-m"
-      viewBox="0 0 $space-m $space-m"
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 1.5rem 1.5rem"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -15,9 +15,9 @@
     </svg>
     <svg
       v-else-if="name === 'logo-android'"
-      width="$space-m"
-      height="$space-m"
-      viewBox="0 0 $space-m $space-m"
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 1.5rem 1.5rem"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

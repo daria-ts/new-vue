@@ -29,7 +29,9 @@ p {
 li {
   @include p-sm;
 }
-
+.caption{
+  @include caption;
+}
 .feature {
   @include overline($neutral-700);
 }
