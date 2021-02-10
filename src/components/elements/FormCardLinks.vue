@@ -30,7 +30,6 @@ export default {
     display: flex;
     width: 14.75rem;
     justify-content: space-between;
-    
 }
 //FIXME: не работают стили наведения
 .caption {

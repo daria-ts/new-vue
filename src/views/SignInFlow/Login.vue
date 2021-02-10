@@ -3,7 +3,7 @@
  
 
     <div class="wrapper">
-       <FormCard/>
+       <FormCard />
     <div class="start-bg">
 
       <div class="features">
@@ -93,6 +93,7 @@ export default {
     height: 4.08rem;
     width: 70%;
 }
+
 .os-icon {
     display: flex;
     width: 15%;

@@ -18,8 +18,11 @@ export default {
 <style lang="scss" scoped>
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/tokens.scss";
-
+body {
+    background: transparent;
+}
 .form-card {
+    
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -32,10 +35,9 @@ export default {
   margin-top: 4rem;
   margin-left: 58%;
   margin-right: 3rem;
-  background-color:$white ;
+  background-color: rgba($white, .9);
   box-shadow: $card-shadow;
   border-radius: $radi-m;
-  opacity: $bg-opasity;
    animation: animcardstart 1.3s ease-in-out 1 normal forwards;
   @keyframes animcardstart {
       0% {
