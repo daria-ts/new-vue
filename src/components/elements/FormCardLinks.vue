@@ -26,6 +26,8 @@ export default {
 <style lang="scss" scoped>
 
 @import "@/global-styles/styles.scss";
+
+
 .link-block{
     @include fixed-login;
     justify-content: space-between;
@@ -35,9 +37,14 @@ export default {
     text-decoration: none;
     color: $primary-500;
     
+    
 }
 .caption:hover {
         text-decoration-line: underline;
+        
+        
+        
+        //TODO: animate transition
     }
 
 </style>

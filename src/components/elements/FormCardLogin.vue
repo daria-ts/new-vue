@@ -4,13 +4,17 @@
         <form class="login" action="">
             <input type="text" name="" id="">
             <input type="text" name="" id="">
-            <button>Войти</button>
+            <ButtonBase />
         </form>
     </div>
 </template>
 
 <script>
+import ButtonBase from '../../components/elements/ButtonBase.vue';
+
+
 export default {
+    components: { ButtonBase },
     name: "FormCardLogin"
 }
 </script>

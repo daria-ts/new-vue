@@ -5,7 +5,7 @@
 
 
 @mixin fixed-login {
-    display: flex;
+    display: inline-flex;
     width: 14.75rem;
 }
 
@@ -16,3 +16,38 @@
     padding: $space-l;
     display: flex;
 }
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+//buttons
+
+@mixin button-template {
+    @include flex-row-center;
+    border-radius: $radi-s;
+    box-shadow: $btn-shadow;
+    border: none;
+}
+
+
+@mixin button-l {
+    @include button-template;
+    padding: 0.75rem 0.875rem 0.75rem 1rem;
+}
+
+@mixin button-s {
+    @include button-template;
+    padding: 0.25rem 1rem;
+}
+
+@mixin btn-priority-extra {
+background: $primary-500;
+    color: $white;
+}
+
+//animations
+
+
