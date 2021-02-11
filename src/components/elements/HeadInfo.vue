@@ -31,6 +31,7 @@ export default {
     margin-top: 2.2rem;
     min-width: 15rem;
     align-items: left;
+    text-align: end;
     
     
   }

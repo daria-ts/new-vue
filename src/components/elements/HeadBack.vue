@@ -1,5 +1,6 @@
 <template>
     <div class="msg-box">
+      <h3 class="header-text">Назад</h3>
       <icon-base class="arrow" ><arrow-back-ios /></icon-base>
       <h3 class="header-text">{{pageName}}</h3>
      </div>
@@ -24,6 +25,7 @@ export default {
 //TODO: имя страницы -- показывается только на второстепенных страницах
 //TODO: сообщения -- иконки-- должны быть связаны с баннером по цвету
 //TODO: обратная ссылка 
+
 <style lang="scss" scoped>
 @import "@/global-styles/styles.scss";
 
