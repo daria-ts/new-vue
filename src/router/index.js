@@ -7,7 +7,7 @@ import Login from "../views/SignInFlow/Login.vue";
 import Register from "../views/SignInFlow/Register.vue";
 import Recover from "../views/SignInFlow/Recover.vue";
 import TestOne from "../views/testing/test-one.vue";
-import TestTwo from "../views/testing/test-two.vue";
+import Components from "../views/testing/Components.vue";
 //TODO: разобраться с пользователем
 const routes = [
 	{
@@ -47,9 +47,9 @@ const routes = [
 		component: TestOne,
 	},
 	{
-		path: "/test-two",
-		name: "test-two",
-		component: TestTwo,
+		path: "/components",
+		name: "components",
+		component: Components,
 	},
 	{
 		path: "/:catchAll(.*)",
