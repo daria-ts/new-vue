@@ -69,6 +69,8 @@
     }
     .user-is-tabbing &:hover,
     &.hover {
+        box-shadow: $btn-shadow-inner;
+        transform: translateZ(0) scale(0.98);
     }
 }
 
@@ -104,7 +106,10 @@
         border: $border-xs solid $neutral-100;
         color: $neutral-400;
     }
-
+@mixin button-disabled {
+    opacity: $disabled;
+    
+}
 
 //imputs
     %input-base {

@@ -3,7 +3,7 @@
     :is="type"
     :href="href"
     :type="submit"
-    :class="['button', size, state, priority, font]"
+    :class="['button', size, state, priority, font,disabled]"
   > 
     <icon-base class="icon"> 
         <Check /> 
@@ -66,8 +66,16 @@ export default {
             //`extra, hight, normal, low`
             //по факту primary, dark, white-prymary-txt, white-gray-txt
         },
+
        //FIXME: с иконками не работает
-       
+       //TODO: пока навешивается только на стиль -- доработать
+       disabled: {
+            type: String,
+            default: null,
+            validator: value => {
+            return value.match(/(null|disabled)/);
+            }
+        }
     }
 };
 
@@ -106,6 +114,9 @@ export default {
   }
   &.low {
     @include btn-priority-low;
+  }
+  &.disabled {
+      @include button-disabled;
   }
   
 

@@ -6,7 +6,7 @@
       <InputBase class="child" />
       <ButtonBase priority="extra">Войти</ButtonBase>
     </form>
-    <ButtonBase priority="hight" icon="null" font="paragraph" is="a" size="s">test АААА</ButtonBase>
+    <ButtonBase disabled="disabled" priority="hight" icon="null" font="paragraph" is="a" size="s">test АААА</ButtonBase>
   </div>
 </template>
 
