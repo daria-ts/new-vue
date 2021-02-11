@@ -18,7 +18,7 @@ export default {
         name: "FormCard"
 }
 </script>
-
+//TODO: пририсовать анимацию "моя" к логотипу
 <style lang="scss" scoped>
 @import "@/global-styles/styles.scss";
 body {

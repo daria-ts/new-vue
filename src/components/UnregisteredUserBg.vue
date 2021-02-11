@@ -233,8 +233,7 @@ li {
    body {
         position:fixed;
    }
-  
-}
+ 
   .wrapper {
     position: absolute;
     overflow: hidden;
