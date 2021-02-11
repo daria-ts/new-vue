@@ -4,9 +4,9 @@
     <form class="login" action="">
       <InputBase class="child" />
       <InputBase class="child" />
-      <ButtonBase>test</ButtonBase>
+      <ButtonBase priority="extra">Войти</ButtonBase>
     </form>
-    <ButtonBase size="s"/>
+    <ButtonBase priority="hight" icon="null" font="paragraph" is="a" size="s">test АААА</ButtonBase>
   </div>
 </template>
 

@@ -3,11 +3,12 @@
     :is="type"
     :href="href"
     :type="submit"
-    :class="['button', size, state, priority, icon, font]"
-  >
-    <icon-base class="icon-l"><Check /></icon-base>
+    :class="['button', size, state, priority, font]"
+  > 
+    <icon-base class="icon"> 
+        <Check /> 
+    </icon-base>
     <slot />
-    <icon-base class="icon-r"><Check /></icon-base>
   </component>
 </template>
 
@@ -47,18 +48,31 @@ export default {
             return value.match(/(null|submit)/);
             }
         },
+        font: { //шрифт -- по умолчанию заголовочный
+            type: String,
+            default: "head",
+            validator: value => {
+            return value.match(/(head|paragraph)/);
+            }
+        },
+
         priority: {
             type: String,
             default: "normal",
             validator: value => {
             return value.match(/(extra|height|normal|low)/);
             }
+            // Приоритеты кнопок -- чтобы проще было устанавливать стили:
+            //`extra, hight, normal, low`
+            //по факту primary, dark, white-prymary-txt, white-gray-txt
         },
+       //FIXME: с иконками не работает
+       
     }
-
-    
 };
+
 </script>
+
 <style lang="scss" scoped>
 @import "@/global-styles/styles.scss";
 
@@ -73,6 +87,13 @@ export default {
   &.s {
     @include button-s;
   }
+   //font
+  &.head {
+    @include btn-h;
+  }
+  &.paragraph {
+    @include btn-p;
+  }
   // Priority -extra (primary), -hight (dark), -normal(white, primary txt), -low (white, gray txt)
   &.extra {
     @include btn-priority-extra;
@@ -86,27 +107,29 @@ export default {
   &.low {
     @include btn-priority-low;
   }
-  //icon
-  &.left {
-    float: left;
-    /* margin-right: 0.5rem; */
-    display: none;
+  
+
+  //icon //TODO: пофиксить иконки -- пока не работает
+  //TODO: пофиксить таб на мобайле
+  
   }
-  &.right {
-    float: left;
-    /* margin-right: 0.5rem; */
-    display: none;
+    
+
+ 
+ .icon {
+     display: none;
+
+     //icon show left 
+     &.left {
+        float: left;
+        margin-right: 0.5rem; 
+        display: inline;
   }
-  //font
-  &.head {
-    @include btn-h;
+      &.right {
+        float: right;
+        margin-left: 0.5rem; 
+        display: inline;
   }
-  &.paragraph {
-    @include btn-p;
-  }
-    }
- button:hover {
-     box-shadow: $btn-shadow-inner;
- }   
+ }
 
 </style>

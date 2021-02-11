@@ -15,6 +15,6 @@ export default {
 @import "@/global-styles/styles.scss";
 
 input {
-  @include input-border;   //or input-flat -- не смогла определиться
+  @include input-flat;   //input-border or input-flat -- не смогла определиться
 }
 </style>
