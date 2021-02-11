@@ -4,6 +4,7 @@
     
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <router-link class="caption" :to="{ name: 'login' }">login</router-link>
+    <router-link class="caption" :to="{ name: 'components' }">components</router-link>
     <img alt="Vue logo" src="../assets/logo.png" />
   </div>
 </template>
