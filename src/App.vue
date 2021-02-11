@@ -16,11 +16,11 @@ h1 {
   @include h-m($primary-500);
 }
 h2 {
-   @include sub-lg
+  @include sub-lg;
 }
 
 h3 {
-   @include sub-sm
+  @include sub-sm;
 }
 h4 {
   @include overline($neutral-700);
@@ -32,8 +32,8 @@ p {
 li {
   @include p-sm;
 }
-.caption{
-  @include caption ($neutral-700);
+.caption {
+  @include caption($neutral-700);
 }
 .feature {
   @include overline($neutral-700);

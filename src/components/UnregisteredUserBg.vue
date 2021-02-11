@@ -1,35 +1,30 @@
 <template>
-<h4>{{question}}</h4>  
- 
+  <h4>{{ question }}</h4>
 
-    <div class="wrapper">
-       
+  <div class="wrapper">
     <div class="start-bg">
-
       <div class="features">
-        <div class="feature-red">{{featureA}}</div>
+        <div class="feature-red">{{ featureA }}</div>
         <img v-bind:src="circleUrl" />
-        <div class="feature">{{featureB}}</div>
+        <div class="feature">{{ featureB }}</div>
         <img v-bind:src="circleUrl" />
-        <div class="feature">{{featureC}}</div>
+        <div class="feature">{{ featureC }}</div>
         <img v-bind:src="circleUrl" />
-        <div class="feature">{{featureD}}</div>
+        <div class="feature">{{ featureD }}</div>
       </div>
-    
     </div>
     <div class="sign-foo">
-        <div class="install-padding">
-            <div class="feature">{{installto}}</div>
-        </div>
-        <a href="#" class="os-icon">
-            <icon name="logo-apple"></icon>
-        </a>
-        <a href="#" class="os-icon">
-            <icon name="logo-android"></icon>
-        </a>
-    </div>  
-  
-</div>
+      <div class="install-padding">
+        <div class="feature">{{ installto }}</div>
+      </div>
+      <a href="#" class="os-icon">
+        <icon name="logo-apple"></icon>
+      </a>
+      <a href="#" class="os-icon">
+        <icon name="logo-android"></icon>
+      </a>
+    </div>
+  </div>
   <div class="left-block">
     Личный кабинет создан по&nbsp;технологии <nobr>PWA-приложения:</nobr>
   </div>
@@ -43,27 +38,25 @@
       <li>Обеспечивает безопасность ваших данных и&nbsp;конфиденциальность</li>
     </ul>
   </div>
-  
 </template>
 
 // TODO: добавить ссылки -- лучше всплывашки подсказки
 <script>
 import Icon from "@/components/elements/Icon.vue";
 
-
-
 export default {
-    data() {
+  data() {
     return {
-        question:'ЧТО ДАЕТ ЛИЧНЫЙ КАБИНЕТ?',
-        featureA:'ДОСТУП К СПЕЦПРЕДЛОЖЕНИЯМ',
-        featureB:'УДОБНАЯ ОПЛАТА',
-        featureC:'ДОКУМЕНТЫ',
-        featureD:'СИГНАЛИЗАЦИЯ',
-        installto:'УСТАНОВИТЬ НА',
-        circleUrl: 'https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg'
-    }
-},
+      question: "ЧТО ДАЕТ ЛИЧНЫЙ КАБИНЕТ?",
+      featureA: "ДОСТУП К СПЕЦПРЕДЛОЖЕНИЯМ",
+      featureB: "УДОБНАЯ ОПЛАТА",
+      featureC: "ДОКУМЕНТЫ",
+      featureD: "СИГНАЛИЗАЦИЯ",
+      installto: "УСТАНОВИТЬ НА",
+      circleUrl:
+        "https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
+    };
+  },
   components: { Icon },
   name: "UnregisteredUserBg"
 };
@@ -73,8 +66,6 @@ export default {
 //styles
 
 @import "@/global-styles/styles.scss";
-
-
 
 .wrapper {
   display: flex;
@@ -87,31 +78,29 @@ export default {
 }
 //2 кнопки
 .sign-foo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 4.08rem;
-    width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 4.08rem;
+  width: 70%;
 }
 
 .os-icon {
-    display: flex;
-    width: 15%;
-    min-width: 5.8rem;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    border: solid $neutral-200;
-    border-width: 0px 0px 0px 1px;
-    :hover {
-        fill:$primary-500;
-        
-    }
-    
+  display: flex;
+  width: 15%;
+  min-width: 5.8rem;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: solid $neutral-200;
+  border-width: 0px 0px 0px 1px;
+  :hover {
+    fill: $primary-500;
+  }
 }
 //TODO: зона наведения
 .install-padding {
-    margin-right: 5%;
+  margin-right: 5%;
 }
 //модуль с картинкой
 .start-bg {
@@ -206,7 +195,6 @@ li {
 }
 
 @media (min-width: $br-md) {
-  
   h4 {
     padding: 2.875rem 3.75rem 0.25rem 10.375rem;
   }
@@ -218,7 +206,6 @@ li {
   .start-bg {
     width: 80%;
     background-size: 50rem;
-    
   }
   .sign-foo {
     width: 70%;
@@ -226,20 +213,19 @@ li {
   .left-block {
     padding-right: 31%;
   }
-  
 }
 
 @media (max-width: $br-sm) {
-   body {
-        position:fixed;
-   }
- 
+  body {
+    position: fixed;
+  }
+
   .wrapper {
     position: absolute;
     overflow: hidden;
     height: 100vh;
   }
- 
+
   h4 {
     position: fixed;
     text-align: center;
@@ -284,7 +270,7 @@ li {
     width: 100%;
     background-position: left -4rem top -1.25rem;
     background-size: 80vh;
-    align-items: bottom ;;
+    align-items: bottom;
     height: 90vh;
     z-index: $z-zero;
     border-width: 0px;
@@ -310,13 +296,13 @@ li {
         border: solid $neutral-200;
   border-width: 1px 0px 0px 0px; */
   }
-    /* .os-icon {
+  /* .os-icon {
       
         width: 50%;
   } */
   .install-padding {
     display: none;
-}
+  }
   .left-block {
     display: none;
   }

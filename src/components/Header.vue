@@ -1,17 +1,13 @@
 <template>
-   <header>
-     
-     <icon name="app-logo"/>
-     <HeadInfo class="infotxt"/>
-     
-    </header>
+  <header>
+    <icon name="app-logo" />
+    <HeadInfo class="infotxt" />
+  </header>
 </template>
 
 <script>
-
-import HeadInfo from '@/components/elements/HeadInfo.vue';
+import HeadInfo from "@/components/elements/HeadInfo.vue";
 import Icon from "@/components/elements/Icon.vue";
-
 
 export default {
   components: { Icon, HeadInfo },
@@ -20,13 +16,13 @@ export default {
 </script>
 
 //header показывается только на странице зарегистрированного пользователя
-//TODO: на страницах 3-го уровня типа user/settings -- вместо имени -- название страницы
-
+//TODO: на страницах 3-го уровня типа user/settings -- вместо имени -- название
+страницы
 
 <style lang="scss" scoped>
 @import "@/global-styles/styles.scss";
 
-header{
+header {
   display: grid;
   grid-template-columns: 3rem 1fr;
   position: fixed;
@@ -34,38 +30,26 @@ header{
   height: 3rem;
   margin-left: auto;
   /* margin-right: auto; */
-  background-color:$neutral-010;
-  border-bottom: 1px  solid $neutral-200;
-
+  background-color: $neutral-010;
+  border-bottom: 1px solid $neutral-200;
 }
 .infotxt {
   position: absolute;
-right: 0;
-
+  right: 0;
 }
-  
-  
- 
 
-  
-  @media (min-width: $br-md){
-    header {
-      max-width: 73.5rem;
-      position: relative;
-      margin-right: auto;
-      margin-left: auto;
-
- 
-    }
-  
+@media (min-width: $br-md) {
+  header {
+    max-width: 73.5rem;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
   }
-  @media (max-width: $br-sm){
-  
-    /* header {
+}
+@media (max-width: $br-sm) {
+  /* header {
       width: 100%;
       max-width: 100vw;
     } */
-    
-  }
-
+}
 </style>

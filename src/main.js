@@ -8,7 +8,7 @@ import IconBase from "@/components/elements/IconBase.vue";
 import Icon from "@/components/elements/Icon.vue";
 
 createApp(App)
-	.use(Icon, IconBase, { tagName: "icon-base" })
-	.use(store)
-	.use(router)
-	.mount("#app");
+  .use(Icon, IconBase, { tagName: "icon-base" })
+  .use(store)
+  .use(router)
+  .mount("#app");
