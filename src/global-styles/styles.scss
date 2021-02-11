@@ -92,15 +92,30 @@
  @mixin btn-priority-normal 
     {
      background: $white;
+     border: $border-xs solid $neutral-050;
      color: $primary-500;
     }
     @mixin btn-priority-low
     {
         background: $white;
+        border: $border-xs solid $neutral-100;
         color: $neutral-400;
     }
 
 
-//animations
+//imputs
+
+    @mixin input-flat {
+    border-radius: $radi-s;
+    background: $neutral-050; 
+    border: none; 
+    min-height: 2.4rem;
+    }
+
+@mixin input-border {
+    border-radius: $radi-s;
+    border:  $border-xs solid $neutral-200; 
+    min-height: 2.4rem;
+    }
 
 

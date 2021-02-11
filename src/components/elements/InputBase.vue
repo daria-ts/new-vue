@@ -15,8 +15,6 @@ export default {
 @import "@/global-styles/styles.scss";
 
 input {
-  border-radius: $radi-s;
-  border: $border-xs solid $neutral-200;
-  min-height: 2.4rem;
+  @include input-border;   //or input-flat -- не смогла определиться
 }
 </style>
