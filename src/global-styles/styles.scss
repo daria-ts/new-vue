@@ -4,54 +4,77 @@
 
 
 
-@mixin fixed-login {
+@mixin fixed-login 
+    {
     display: inline-flex;
     width: 14.75rem;
-}
+    
+    }
 
-@mixin card-wrapper {
+@mixin card-wrapper 
+    {
     background: $white;
     box-shadow: $card-shadow;
     border-radius: $radi-m;
     padding: $space-l;
     display: flex;
-}
+    }
 
-@mixin flex-row-center {
+@mixin flex-row-center 
+    {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
+    }
+
+
 //buttons
 
-@mixin button-template {
+@mixin button-template 
+    {
     @include flex-row-center;
     border-radius: $radi-s;
     box-shadow: $btn-shadow;
     border: none;
-}
+    }
 
 
-@mixin button-l {
+@mixin button-l 
+    {
     @include button-template;
     padding: 0.75rem 0.875rem 0.75rem 1rem;
-}
+    }
 
-@mixin button-s {
+@mixin button-s 
+    {
     @include button-template;
     padding: 0.25rem 1rem;
-}
-
-@mixin btn-priority-extra {
-background: $primary-500;
-    color: $white;
-}
-
-@mixin btn-priority-hight {
-    background: $neutral-700;
-        color: $white;
     }
+
+@mixin btn-priority-extra 
+    {
+    background: $primary-500;
+    color: $white;
+    }
+
+@mixin btn-priority-hight 
+    {
+    background: $neutral-700;
+    color: $white;
+    }
+
+ @mixin btn-priority-normal 
+    {
+     background: $white;
+     color: $primary-500;
+    }
+    @mixin btn-priority-normal 
+    {
+        background: $white;
+        color: $primary-500;
+    }
+
 
 //animations
 

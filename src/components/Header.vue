@@ -1,10 +1,9 @@
 <template>
    <header>
-     <div class="header">
+     
      <icon name="app-logo"/>
-     <HeadInfo></HeadInfo>
-     </div>
-     <hr />
+     <HeadInfo class="infotxt"/>
+     
     </header>
 </template>
 
@@ -27,46 +26,45 @@ export default {
 @import "@/global-styles/styles.scss";
 
 header{
-  width: auto;
-  height: 5rem;
-  max-width: 73.5rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  position: fixed;
+  width: 100%;
+  height: 3rem;
   margin-left: auto;
-  margin-right: auto;
+  /* margin-right: auto; */
   background-color:$neutral-010;
+  border-bottom: 1px  solid $neutral-200;
 
 }
+.infotxt {
+  position: absolute;
+right: 0;
 
-  .header {
-    padding: 1.6rem 0 0 0;
-    display: flex;
-    justify-content: space-between;
-    height: 3rem;
-    
-
-  }
+}
   
   
-  hr{
-    border: none; 
-    color: $neutral-200; 
-    background-color:$neutral-200; 
-    height: 1px;
-    float: right;
-    width: calc(100% - 4.08rem);
-    max-width: 70rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2rem;
-  }
+ 
 
   
   @media (min-width: $br-md){
-    hr{
-      width: 110%;
-      padding-left: -2rem;
-      float: none;
+    header {
+      max-width: 73.5rem;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+
+ 
     }
   
+  }
+  @media (max-width: $br-sm){
+  
+    /* header {
+      width: 100%;
+      max-width: 100vw;
+    } */
+    
   }
 
 </style>

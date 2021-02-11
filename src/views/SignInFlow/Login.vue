@@ -1,6 +1,6 @@
 <template>
-  <FormCard />
-  <UnregisteredUserBg />
+ <FormCard />
+  <UnregisteredUserBg  />
 </template>
 
 // TODO: добавить ссылки -- лучше всплывашки подсказки
@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// @import "@/global-styles/styles.scss";
+
 //styles
 </style>

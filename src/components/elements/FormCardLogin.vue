@@ -2,8 +2,8 @@
     <div class="wrapper">
         <h2>ВХОД ДЛЯ КЛИЕНТОВ</h2>
         <form class="login" action="">
-            <input type="text" name="" id="">
-            <input type="text" name="" id="">
+            <InputBase class="child"/>
+            <InputBase class="child"/>
             <ButtonBase />
         </form>
     </div>
@@ -11,10 +11,10 @@
 
 <script>
 import ButtonBase from '../../components/elements/ButtonBase.vue';
-
+import InputBase from '../../components/elements/InputBase.vue';
 
 export default {
-    components: { ButtonBase },
+    components: { ButtonBase, InputBase },
     name: "FormCardLogin"
 }
 </script>
@@ -29,6 +29,7 @@ export default {
     height: 15.5rem;
     justify-content: space-between;
     align-items: flex-start;
+    
 }
 h2 {
     color: $neutral-300;
@@ -38,7 +39,13 @@ h2 {
     @include fixed-login;
     flex-direction: column;
     justify-content: flex-start;
-
+    /* gap: $space-s; */ 
+    // FIXME: не работает в сафари. Временно через margin .child
 }
 
+
+.child {
+    margin-bottom: $space-s;
+
+}
 </style>

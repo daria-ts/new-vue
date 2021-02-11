@@ -230,8 +230,9 @@ li {
   h4 {
     text-align: center;
     padding: 2.875rem 0rem 0.25rem 0rem;
-    width: 100%;
+    width: 100vw;
     animation: animh 1s ease-out 1 normal forwards;
+    border-width: 0px 0px 1px 0px;
     z-index: $z-10;
     @keyframes animh {
       0% {
@@ -269,6 +270,8 @@ li {
     width: 100%;
     background-position: left -4rem top -1.25rem;
     background-size: 50rem;
+    align-items: bottom ;;
+    height: 100%;
     z-index: $z-zero;
     border-width: 0px;
     animation: animate-enter-1 0.8s ease-in 1 normal forwards;
@@ -287,6 +290,7 @@ li {
     display: none;
   }
   .sign-foo {
+    display: none;
     width: 100%;
     text-align: center;
         border: solid $neutral-200;

@@ -33,8 +33,8 @@ body {
   margin-top: 7.4rem;
   margin-left: 15%;
   margin-right: 3rem;
-  background-color: rgba($white, .92);
-  animation: animcardstart 1.3s ease-in-out 1 normal forwards;
+  background-color: rgba($white, .97);
+  animation: animcardstart 1.1s ease-in-out 1 normal forwards;
   @keyframes animcardstart {
       0% {
         transform: translateX(-12rem);
@@ -63,12 +63,17 @@ body {
   @media (max-width: $br-sm) {
    .form-card {
   margin-top: 38%;
-  margin-left: 5%;
-  width: -webkit-calc(90% - 4.5rem);
-  width: calc(90% - 4.5rem);
-  height: -webkit-calc(60% - 4.5rem);
-  height: calc(60% - 4.5rem);
-  min-height: 25rem ;
+  margin-left: 10%;
+  width: 80%;
+  height: 60%;
+  
+  /* margin-left: -webkit-calc(10vw - 2.5rem);
+   margin-left: calc(10vw - 2.5rem);   */
+    /* width: 90vw;
+   
+    height: -webkit-calc(60% - 4.5rem);
+    height: calc(60% - 4.5rem);
+    min-height: 25rem ; */
   
   @keyframes animcardstart {
       0% {

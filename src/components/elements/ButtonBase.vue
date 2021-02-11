@@ -8,7 +8,7 @@
  import IconBase from "@/components/elements/IconBase.vue";
  import Check from "../../components/elements/icons/check.vue";
 
-
+//TODO: логика, добавить иконку чек в кружочке в файлы svg
 export default {
     data() {
     return {
