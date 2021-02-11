@@ -4,8 +4,9 @@
         <form class="login" action="">
             <InputBase class="child"/>
             <InputBase class="child"/>
-            <ButtonBase />
+            <ButtonBase buttonText="test"/>
         </form>
+        <ButtonBase/>
     </div>
 </template>
 
@@ -45,7 +46,7 @@ h2 {
 
 
 .child {
-    margin-bottom: $space-s;
+    margin-bottom: $space-s; // расстояние между полями формы
 
 }
 </style>
