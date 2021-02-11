@@ -1,11 +1,14 @@
 <template>
+
     <div class="form-card">
+  
         <LogoFull bg="logo-on-white"></LogoFull>
         <FormCardLogin />
         <FormCardLinks />
+      
     </div>
 </template>
-
+  //bg = on-whine/red/black -- в зависимости от фона
 <script>
 import LogoFull from "@/components/elements/LogoFull.vue";
 import FormCardLinks from "@/components/elements/FormCardLinks.vue";
@@ -23,31 +26,14 @@ body {
 }
 .form-card {
   @include card-wrapper;
-  position: absolute;
   flex-direction: column;
   justify-content: space-between;
   align-items: center; 
   width:14.75rem;
   height: 22.375rem;
   z-index: $z-10;
-  margin-top: 7.4rem;
-  margin-left: 15%;
-  margin-right: 3rem;
   background-color: rgba($white, .97);
-  animation: animcardstart 1.1s ease-in-out 1 normal forwards;
-  @keyframes animcardstart {
-      0% {
-        transform: translateX(-12rem);
-        opacity: 0;
-      }
-      20% {transform: translateX(-12rem);
-        opacity: 0;
-        }
-      100% {
-        transform: translateX(0rem);
-        opacity: 1;
-      }
-    }
+ 
 }
 
 .form-block{
@@ -55,40 +41,11 @@ body {
     
 }
 
-@media (min-width: $br-md) {
-  .form-card {
-      margin-top: 12rem;
-    margin-left: 22%;
-  }}
+
   @media (max-width: $br-sm) {
-   .form-card {
-  margin-top: 38%;
-  margin-left: 10%;
-  width: 80%;
-  height: 60%;
-  
-  /* margin-left: -webkit-calc(10vw - 2.5rem);
-   margin-left: calc(10vw - 2.5rem);   */
-    /* width: 90vw;
-   
-    height: -webkit-calc(60% - 4.5rem);
-    height: calc(60% - 4.5rem);
-    min-height: 25rem ; */
-  
-  @keyframes animcardstart {
-      0% {
-        transform: translateY(8rem);
-        opacity: 0;
-      }
-      20% {transform: translateY(8rem);
-        opacity: 0;
-        }
-      100% {
-        transform: translateY(0rem);
-        opacity: 1;
-      }
-    }
-  /* margin-left: calc(50vh - 19.25rem); */
-  
-  }}
+  .form-card {
+      width: 16em;
+     height: 24em;
+  }
+  }
 </style>

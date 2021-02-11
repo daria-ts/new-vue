@@ -28,8 +28,8 @@
             <icon name="logo-android"></icon>
         </a>
     </div>  
-  </div>
-
+  
+</div>
   <div class="left-block">
     Личный кабинет создан по&nbsp;технологии <nobr>PWA-приложения:</nobr>
   </div>
@@ -43,6 +43,7 @@
       <li>Обеспечивает безопасность ваших данных и&nbsp;конфиденциальность</li>
     </ul>
   </div>
+  
 </template>
 
 // TODO: добавить ссылки -- лучше всплывашки подсказки
@@ -63,7 +64,7 @@ export default {
         circleUrl: 'https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg'
     }
 },
-  components: { Icon},
+  components: { Icon },
   name: "UnregisteredUserBg"
 };
 </script>
@@ -146,6 +147,7 @@ h4 {
 //features
 
 .features {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -211,10 +213,12 @@ li {
   .features {
     padding: 0rem 0rem 0rem 10.375rem;
     width: 48.5rem;
+    z-index: $z-sticky;
   }
   .start-bg {
     width: 80%;
     background-size: 50rem;
+    
   }
   .sign-foo {
     width: 70%;
@@ -226,8 +230,19 @@ li {
 }
 
 @media (max-width: $br-sm) {
+   body {
+        position:fixed;
+   }
+  
+}
+  .wrapper {
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+  }
  
   h4 {
+    position: fixed;
     text-align: center;
     padding: 2.875rem 0rem 0.25rem 0rem;
     width: 100vw;
@@ -269,9 +284,9 @@ li {
   .start-bg {
     width: 100%;
     background-position: left -4rem top -1.25rem;
-    background-size: 50rem;
+    background-size: 80vh;
     align-items: bottom ;;
-    height: 100%;
+    height: 90vh;
     z-index: $z-zero;
     border-width: 0px;
     animation: animate-enter-1 0.8s ease-in 1 normal forwards;
@@ -291,14 +306,15 @@ li {
   }
   .sign-foo {
     display: none;
-    width: 100%;
+    /* width: 100%;
     text-align: center;
         border: solid $neutral-200;
-  border-width: 1px 0px 0px 0px;
+  border-width: 1px 0px 0px 0px; */
   }
-    .os-icon {
+    /* .os-icon {
+      
         width: 50%;
-  }
+  } */
   .install-padding {
     display: none;
 }
