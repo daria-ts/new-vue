@@ -80,7 +80,7 @@ export default {
       validator: value => {
         return value.match(/(null|disabled)/);
       }
-    },
+    }
   }
 };
 </script>
@@ -122,7 +122,7 @@ export default {
   &.disabled {
     @include button-disabled;
     cursor: not-allowed;
-      &:hover,
+    &:hover,
     &.hover {
       box-shadow: none;
     }
@@ -148,3 +148,21 @@ export default {
   }
 }
 </style>
+
+<docs>
+  ```jsx
+  <div>
+    <Button priority="extra" size="l" icon="left" font="paragraph">Primary Button</Button>
+    <Button priority="extra" size="l" icon="right" font="paragraph">Primary Button</Button>
+    <Button priority="extra" size="s">Small</Button>
+    <Button priority="height" size="s">Small</Button>
+    <Button priority="normal" size="s">Small</Button>
+    <Button priority="low" size="s">Small</Button>
+    <br />
+    <Button>Default Button</Button>
+    <Button state="hover">:hover</Button>
+    <Button state="active">:active</Button>
+    <Button state="focus">:focus</Button>
+  </div>
+  ```
+</docs>

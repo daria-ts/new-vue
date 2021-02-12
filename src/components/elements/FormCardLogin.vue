@@ -2,9 +2,25 @@
   <div class="wrapper">
     <h2>ВХОД ДЛЯ КЛИЕНТОВ</h2>
     <form class="login" action="">
-      <Input id=phone type="tel" placeholder="+7-XXX-XXX-XX-XX" pattern="[0-9]{10}" inputmode="numeric" minlength="10"
-       maxlength="10" size="10" required /> 
-      <Input  id="userPassword" disabled placeholder="пароль" type="password" required autocomplete="current-password"/>
+      <Input
+        id="phone"
+        type="tel"
+        placeholder="+7-XXX-XXX-XX-XX"
+        pattern="[0-9]{10}"
+        inputmode="numeric"
+        minlength="10"
+        maxlength="10"
+        size="10"
+        required
+      />
+      <Input
+        id="userPassword"
+        disabled
+        placeholder="пароль"
+        type="password"
+        required
+        autocomplete="current-password"
+      />
       <bttn priority="extra">Войти</bttn>
     </form>
     <!-- <bttn
@@ -20,11 +36,10 @@
 </template>
 
 <script>
-
 import Input from "../../components/elements/InputBase.vue";
 import Bttn from "../../components/elements/ButtonBase.vue";
 export default {
-  components: { Input, Bttn, },
+  components: { Input, Bttn },
   name: "FormCardLogin"
 };
 </script>
@@ -47,19 +62,18 @@ h2 {
   @include fixed-login;
   flex-direction: column;
   justify-content: flex-start;
-
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-right: 25px;
   color: #8b0000;
 }
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
-
 </style>

@@ -1705,16 +1705,6 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yzfe/svgicon@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@yzfe/svgicon/-/svgicon-1.0.1.tgz#c17578471f680dd16d43aa4b1a35d6df40536e1c"
-  integrity sha512-odoulRFpqvqDg52dqa8P+plYeeFeNQsu8Sr8aZQ/5Q6kHHXsYCD5CjlfVEFJL5ht/jrFBBYa/mLsFqmsoX7Fug==
-
-"@yzfe/vue3-svgicon@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@yzfe/vue3-svgicon/-/vue3-svgicon-1.0.1.tgz#ef1ad74f9e1e3091c2e5b9e2867f814563bab155"
-  integrity sha512-yMzRkT115+K49h0hS1ZNg8UfY4vNwWpIetTYcDalkoxb0mqJr/6s/Ms5g35BNpNf6S3rxlsXGaSOHdN23VTEYw==
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
