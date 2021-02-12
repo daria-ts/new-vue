@@ -8,6 +8,7 @@
 
 //for components
 @import "./element-styles/buttons.scss";
+@import "./element-styles/inputs.scss";
 
 //additional
 
@@ -38,21 +39,6 @@
 }
 
 
-//imputs
-    %input-base {
-    border-radius: $radi-s;
-    height: 2.4rem;
-    }
 
-    @mixin input-flat {
-    @extend %input-base;
-    background: $neutral-050; 
-    border: none; 
-    }
-
-    @mixin input-border {
-    @extend %input-base;
-    border:  $border-xs solid $neutral-200; 
-    }
 
 
