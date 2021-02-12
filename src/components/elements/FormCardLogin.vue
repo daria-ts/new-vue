@@ -2,8 +2,8 @@
   <div class="wrapper">
     <h2>ВХОД ДЛЯ КЛИЕНТОВ</h2>
     <form class="login" action="">
-      <Input id=phone type="tel" placeholder="+7-XXX-XXX-XX-XX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" inputmode="numeric" minlength="10"
-       maxlength="10" size="10" required /><span class="validity"></span>
+      <Input id=phone type="tel" placeholder="+7-XXX-XXX-XX-XX" pattern="[0-9]{10}" inputmode="numeric" minlength="10"
+       maxlength="10" size="10" required />
       <Input  id="userPassword" disabled placeholder="пароль" type="password" required autocomplete="current-password"/>
       <bttn priority="extra">Войти</bttn>
     </form>

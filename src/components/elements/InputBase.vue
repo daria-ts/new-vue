@@ -14,6 +14,7 @@
       @input="onInput($event.target.value)"
       @focus="onFocus($event.target.value)"
     />
+    <!-- <span class="validity"></span> добавить нормальную валидацию-->
   </component>
 </template>
 
@@ -185,5 +186,17 @@ $color-placeholder: tint($neutral-500, 10%);
     
   }
 }
+//TODO: нормальную валидацию добавить 
+    input:invalid+span:after {
+      position: absolute; content: '✖';
+      padding-right: 25px;
+      color: #8b0000;
+    }
+    input:valid+span:after {
+      position: absolute;
+      content: '✓';
+      padding-left: -45px;
+      color: #009000;
+    }
 
 </style>
