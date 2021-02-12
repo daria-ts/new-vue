@@ -1,6 +1,7 @@
 //imputs
 //2 варианта стиля -- пока не смогла определиться -- рамка и сплошное поле
 %input-base {
+    @include p-sm;
     border-radius: $radi-s;
     height: 2.4rem;
     }

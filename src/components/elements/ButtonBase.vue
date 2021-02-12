@@ -76,11 +76,11 @@ export default {
     //TODO: пока навешивается только на стиль -- доработать
     disabled: {
       type: String,
-      default: null,
+      default: "null",
       validator: value => {
         return value.match(/(null|disabled)/);
       }
-    }
+    },
   }
 };
 </script>
@@ -121,6 +121,11 @@ export default {
   }
   &.disabled {
     @include button-disabled;
+    cursor: not-allowed;
+      &:hover,
+    &.hover {
+      box-shadow: none;
+    }
   }
 
   //icon //TODO: пофиксить иконки -- пока не работает

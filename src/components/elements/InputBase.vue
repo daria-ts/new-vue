@@ -17,6 +17,10 @@
   </component>
 </template>
 
+//TODO: добавить примечания и подсказки к полю
+//TODO: добавить для ошибок
+//TODO: добавить маски
+//TODO: add required, pattern(validation), autocomplete (on,"new-password","current-password")
 <script>
 /**
  * Для короткого текста или чисел -- в одну строку
@@ -25,39 +29,38 @@ export default {
   name: "Input",
   props: {
     /**
-     * The type of the form input field.
-     * `text, number, email`
+     * Тип поля: `text, number, email, phone`
      */
     type: {
       type: String,
       default: "text",
       validator: value => {
-        return value.match(/(text|number|email)/)
+        return value.match(/(text|number|email|tel|password)/)
       },
     },
     /**
-     * Text value of the form input field.
+     * Значение по умолчанию
      */
     value: {
       type: String,
       default: null,
     },
     /**
-     * The placeholder value for the form input field.
+     * Placeholder.
      */
     placeholder: {
       type: String,
       default: null,
     },
     /**
-     * The label of the form input field.
+     * Label -- по умолчанию отсутствует.
      */
     label: {
       type: String,
       default: null,
     },
     /**
-     * The html element name used for the wrapper.
+     *  Html-таг враппера.
      * `div, section`
      */
     wrapper: {
@@ -68,14 +71,14 @@ export default {
       },
     },
     /**
-     * Unique identifier of the form input field.
+     * Уникальный идентификатор поля ID.
      */
     id: {
       type: String,
       default: null,
     },
     /**
-     * The width of the form input field.
+     * Длина поля.
      * `auto, expand`
      */
     width: {
@@ -86,7 +89,7 @@ export default {
       },
     },
     /**
-     * Whether the form input field is disabled or not.
+     * Задать статус disabled.
      * `true, false`
      */
     disabled: {
@@ -94,7 +97,7 @@ export default {
       default: false,
     },
     /**
-     * Manually trigger various states of the input.
+     * Принудительно сделать поле активным, в фокусе, наведении.
      * `hover, active, focus`
      */
     state: {
@@ -118,8 +121,69 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/global-styles/styles.scss";
-
-input {
-  @include input-flat; //input-border or input-flat -- не смогла определиться
+$color-placeholder: tint($neutral-500, 10%);
+.input {
+  
+  @include stack-space($space-s);//для пробелов между полями
+  width: auto;
+  &-expand {
+    width: 100%;
+  }
+  label {
+    cursor: pointer;
+    display: block;
+    @include p-sm; //шрифт заголовка формы, можно изменить p-lg or p-sm
+    @include stack-space($space-xs);//расстояние между лейблом и формой
+    text-align: left;
+    //padding-inline-start: $space-s; выравнивание лейбла с плейсхолдером
+  }
+  input {
+    @include reset;
+    @include input-flat; //input-border or input-flat -- не смогла определиться
+    @include inset-squish-space($space-s);//отступ текста от формы
+    transition: all 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+    color: $neutral-800;
+    width: 100%;
+    margin: 0;
+    /* border:  $border-xs solid $neutral-400; */
+    box-shadow: none;
+    &::-webkit-input-placeholder {
+      -webkit-font-smoothing: antialiased;
+      color: $color-placeholder;
+    }
+    &:-ms-input-placeholder {
+      color: $color-placeholder;
+    }
+    &::-moz-placeholder {
+      color: $color-placeholder;
+      -moz-osx-font-smoothing: grayscale;
+      opacity: 1;
+    }
+    &:hover,
+    &.hover {
+      box-shadow: $input-shadow-inner
+    }
+    &:focus,
+    &.focus {
+      transition: box-shadow 0.2s ease;
+      box-shadow: inset 0 0 0 1px $neutral-500, 0 0 0 1px $neutral-050;
+      outline: 0;
+    }
+    &[disabled] {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: $neutral-100;
+      color: $neutral-200;
+      cursor: not-allowed; 
+      &:hover,
+    &.hover {
+      box-shadow: none;
+    }
+    }
+    
+  }
 }
+
 </style>

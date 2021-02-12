@@ -1,0 +1,134 @@
+/* GLOBAL FUNCTIONS
+--------------------------------------------- */
+
+// Осветление
+//
+// @param  {Color}  $color to tint
+// @param  {Number} $percentage of `$color` in returned color
+// @return {Color}
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+  }
+  
+  // Затемнение
+  //
+  // @param  {Color}  $color to shade
+  // @param  {Number} $percentage of `$color` in returned color
+  // @return {Color}
+  @function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+  }
+  
+  // Вычислить разницу
+  // Здесь алгоритм https://www.w3.org/TR/AERT/#color-contrast 
+  //
+  // @param  {Color} $color of foreground
+  // @param  {Color} $color of background
+  // @return {Boolean}
+  @function color-difference($foreground, $background) {
+    $r: (max(red($foreground), red($background))) - (min(red($foreground), red($background)));
+    $g: (max(green($foreground), green($background))) - (min(green($foreground), green($background)));
+    $b: (max(blue($foreground), blue($background))) - (min(blue($foreground), blue($background)));
+    $sum-rgb: $r + $g + $b;
+  
+    @if $sum-rgb < 350 {
+      @return "false";
+    } @else {
+      @return "true";
+    }
+  }
+  
+  // Создать цвет на основе контраста
+  //
+  // @param  {Color}  $color to set
+  // @param  {Color}  $background color to test
+  // @param  {Color}  $fallback color to set in case contrast check fails
+  @function set-text-color($color, $background, $fallback: null) {
+    @if $fallback == null {
+      $fallback: #000;
+    }
+    @if (color-difference($color, $background) == "false") {
+      @return $fallback;
+    } @else {
+      @return $color;
+    }
+  }
+  
+  /// Наложение “multiply” 
+  ///
+  /// @param {Color} $foreground - The color to darken.
+  /// @param {Color} $background - The background to base darkening on.
+  /// @return {Color} The modified color.
+  @function color-multiply($foreground, $background: null) {
+    @if $background == null {
+      $background: #ffffff;
+    }
+  
+    @return $foreground * $background / 255;
+  }
+  
+  /// PX to REM
+  /// @param {Number} $value - Значение в px.
+  /// @return {Number} Конвертация в rem.
+  @function rem($value) {
+    $unit: unit($value);
+  
+    @if $unit == "rem" {
+      @return $value;
+    } @else if $unit == "px" {
+      @return $value / $size-m * 1rem;
+    } @else if $unit == "em" {
+      @return $unit / 1em * 1rem;
+    } @else {
+      @error "Value must be in px, em, or rem.";
+    }
+  }
+  
+  /// REM to PX
+  /// @param {Number} $value - The rem value to be converted.
+  /// @return {Number} The converted value in pixels.
+  @function px($value) {
+    $unit: unit($value);
+  
+    @if $unit == "px" {
+      @return $value;
+    } @else if $unit == "em" {
+      @return ($value / 1em) * $size-m;
+    } @else if $unit == "rem" {
+      @return ($value / 1rem) * $size-m;
+    } @else {
+      @error "Value must be in rem, em, or px.";
+    }
+  }
+  
+  /// Returns the list of available names in a given map.
+  /// @param {Map} $map - The map of data to list the names from.
+  /// @param {Number} $map - The level of depth to get names from.
+  /// @return {String} The list of names in the map.
+  @function available-names($map, $level: 1) {
+    @if type-of($map) != "map" {
+      @return null;
+    }
+  
+    $output: "";
+    $newline: "\A ";
+  
+    @if $level == 1 {
+      @each $key, $value in $map {
+        $output: $output + "#{$newline}- #{$key} #{available-names($value, $level + 1)}";
+      }
+    } @else {
+      $output: "(";
+      $i: 1;
+  
+      @each $key, $value in $map {
+        $sep: if($i < length($map), ", ", "");
+        $output: $output + "#{$key}#{$sep}#{available-names($value, $level + 1)}";
+        $i: $i + 1;
+      }
+  
+      $output: $output + ")";
+    }
+  
+    @return $output;
+  }

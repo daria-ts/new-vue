@@ -2,11 +2,12 @@
   <div class="wrapper">
     <h2>ВХОД ДЛЯ КЛИЕНТОВ</h2>
     <form class="login" action="">
-      <InputBase class="child" />
-      <InputBase class="child" />
+      <Input id=phone type="tel" placeholder="+7-XXX-XXX-XX-XX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" inputmode="numeric" minlength="10"
+       maxlength="10" size="10" required /><span class="validity"></span>
+      <Input  id="userPassword" disabled placeholder="пароль" type="password" required autocomplete="current-password"/>
       <bttn priority="extra">Войти</bttn>
     </form>
-    <bttn
+    <!-- <bttn
       disabled="disabled"
       priority="hight"
       icon="null"
@@ -14,17 +15,17 @@
       is="a"
       size="s">
       test АААА
-    </bttn><button-base>test</button-base>
+    </bttn> -->
   </div>
 </template>
 
 <script>
 
-import InputBase from "../../components/elements/InputBase.vue";
+import Input from "../../components/elements/InputBase.vue";
 import Bttn from "../../components/elements/ButtonBase.vue";
 
 export default {
-  components: { InputBase, Bttn },
+  components: { Input, Bttn },
   name: "FormCardLogin"
 };
 </script>
@@ -47,11 +48,19 @@ h2 {
   @include fixed-login;
   flex-direction: column;
   justify-content: flex-start;
-  /* gap: $space-s; */
-  // FIXME: не работает в сафари. Временно через margin .child
+
 }
 
-.child {
-  margin-bottom: $space-s; // расстояние между полями формы
+input:invalid+span:after {
+  position: absolute; content: '✖';
+  padding-right: 25px;
+  color: #8b0000;
 }
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+  color: #009000;
+}
+
 </style>

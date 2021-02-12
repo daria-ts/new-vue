@@ -4,7 +4,10 @@
 @import "./typography.scss";
 
 // вычисляемые пробелы
-@import "./spacers.scss";
+@import "./additional/spacers.scss";
+
+// глобальные функции
+@import "./additional/functions.scss";
 
 //for components
 @import "./element-styles/buttons.scss";
