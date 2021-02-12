@@ -32,10 +32,3 @@ if (process.env.NODE_ENV === "production") {
     }
   });
 }
-// module.exports = {
-// 	pwa: {
-// 		workboxOptions: {
-// 			exclude: [/_redirects/],
-// 		},
-// 	},
-// };

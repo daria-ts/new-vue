@@ -13,6 +13,11 @@
 @import "./element-styles/buttons.scss";
 @import "./element-styles/inputs.scss";
 
+//animatiin global
+@mixin transition-global {
+    transition: 0.8s cubic-bezier(0.215, 0.810, 0.2, 1);
+}
+
 //additional
 
 @mixin reset {

@@ -41,7 +41,9 @@ li {
 .feature-red {
   @include overline($primary-500);
 }
-
+*{
+  @include transition-global;
+}
 #app {
   font-family: $pfont;
   -webkit-font-smoothing: antialiased;

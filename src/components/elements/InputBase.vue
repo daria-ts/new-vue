@@ -96,7 +96,7 @@ export default {
       type: Boolean,
       default: false
     },
-    
+
     /**
      * Принудительно сделать поле активным, в фокусе, наведении.
      * `hover, active, focus`
@@ -168,8 +168,10 @@ $color-placeholder: tint($neutral-500, 10%);
     &:focus,
     &.focus {
       transition: box-shadow 0.2s ease;
-      box-shadow: inset 0 0 0 1px $neutral-500, 0 0 0 1px $neutral-050;
-      outline: 0;
+      box-shadow: $input-shadow-focus;
+      outline:none;
+      outline-offset: 0;
+      
     }
     &[disabled] {
       -webkit-font-smoothing: antialiased;

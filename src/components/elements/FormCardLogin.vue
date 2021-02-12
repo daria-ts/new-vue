@@ -1,45 +1,47 @@
 <template>
   <div class="wrapper">
     <h2>ВХОД ДЛЯ КЛИЕНТОВ</h2>
-    <form class="login" action="">
+    <form @submit.prevent="FormCardLogin()" class="loginform">
       <Input
-        id="phone"
-        type="tel"
-        placeholder="+7-XXX-XXX-XX-XX"
-        pattern="[0-9]{10}"
-        inputmode="numeric"
-        minlength="10"
-        maxlength="10"
-        size="10"
+        id="Email"
+        type="email"
+        placeholder="Почта"
         required
+        v-model="loginCreds.email"
       />
       <Input
         id="userPassword"
-        placeholder="пароль"
+        placeholder="Пароль"
         type="password"
         required
+        v-model="loginCreds.password"
         autocomplete="current-password"
       />
-      <bttn priority="extra">Войти</bttn>
+      <bttn type="Submit" priority="extra">Войти</bttn>
     </form>
   </div>
 </template>
 
 <script>
-import { Auth } from "@/main"; //identity
 import Input from "../../components/elements/InputBase.vue";
 import Bttn from "../../components/elements/ButtonBase.vue";
 
 export default {
   name: "FormCardLogin",
-  components: { 
-    Input, 
-    Bttn 
-    },
-    mounted() {
-      
-    }
-  
+  components: {
+    Input,
+    Bttn
+  },
+  data() {
+    return {
+      loginCreds: {
+        email: null,
+        password: null
+      }
+    };
+  },
+
+  methods: {}
 };
 </script>
 
@@ -57,7 +59,7 @@ export default {
 h2 {
   color: $neutral-300;
 }
-.login {
+.loginform {
   @include fixed-login;
   flex-direction: column;
   justify-content: flex-start;

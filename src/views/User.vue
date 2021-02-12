@@ -1,15 +1,16 @@
 <template>
   <header />
-  <h1>Это страница пользователя {{ $route.params.name }}</h1>
+  <h1>Это страница пользователя {{ $route.params.user }}</h1>
 </template>
 
 <script>
 import { reactive, toRefs } from "@vue/composition-api";
 
 export default {
+  // name:"User"
   setup() {
     const state = reactive({
-      props: ["name"]
+      props: ["user"]
     });
 
     return {
