@@ -1,47 +1,42 @@
 <template>
   <component :is="type" class="wrapper">
-    <slot />
+    <slot/>
   </component>
 </template>
 
 <script>
 /**
- * Used to build the outer wrapper of a page, including the page title and
- * associated actions. Wrapper doesn’t provide customizable options.
+ * Оборачивает  несколько компонент в 1. Нельзя кастомизировать
  */
 export default {
   name: "Wrapper",
-  status: "review",
-  release: "1.0.0",
   props: {
     /**
-     * The html element name used for the wrapper.
+     * html-элемент, использующийся как враппер, по умолчанию div.
      */
     type: {
       type: String,
-      default: "div"
-    }
-  }
-};
+      default: "div",
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .wrapper {
   @include reset;
   @include inset-space($space-l);
-  font-family: $font-text;
-  font-weight: $weight-normal;
-  font-size: $size-m;
-  line-height: $line-height-m;
+  @include p-lg; //for text
   width: 100%;
-  @media #{$media-query-l} {
+  @media #{$br-md} {
     @include inset-space($space-xl);
   }
 }
 </style>
 
+
 <docs>
   ```jsx
-  <Wrapper>Wrapper can be used to wrap any components together.</Wrapper>
+  <Wrapper>Чтобы обернуть компоненты вместе</Wrapper>
   ```
 </docs>

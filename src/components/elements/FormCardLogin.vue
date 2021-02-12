@@ -4,26 +4,27 @@
     <form class="login" action="">
       <InputBase class="child" />
       <InputBase class="child" />
-      <ButtonBase priority="extra">Войти</ButtonBase>
+      <button-base priority="extra">Войти</button-base>
     </form>
-    <ButtonBase
+    <button-base
       disabled="disabled"
       priority="hight"
       icon="null"
       font="paragraph"
       is="a"
-      size="s"
-      >test АААА</ButtonBase
-    >
+      size="s">
+      test АААА
+    </button-base><button-base>test</button-base>
   </div>
 </template>
 
 <script>
-import ButtonBase from "../../components/elements/ButtonBase.vue";
+
 import InputBase from "../../components/elements/InputBase.vue";
+import ButtonBase from "../../components/elements/ButtonBase.vue";
 
 export default {
-  components: { ButtonBase, InputBase },
+  components: { InputBase, ButtonBase },
   name: "FormCardLogin"
 };
 </script>
