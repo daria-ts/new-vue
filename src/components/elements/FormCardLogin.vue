@@ -15,7 +15,6 @@
       />
       <Input
         id="userPassword"
-        disabled
         placeholder="пароль"
         type="password"
         required
@@ -62,18 +61,5 @@ h2 {
   @include fixed-login;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-input:invalid + span:after {
-  position: absolute;
-  content: "✖";
-  padding-right: 25px;
-  color: #8b0000;
-}
-input:valid + span:after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
-  color: #009000;
 }
 </style>

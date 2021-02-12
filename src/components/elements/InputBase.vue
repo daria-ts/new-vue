@@ -96,6 +96,7 @@ export default {
       type: Boolean,
       default: false
     },
+    
     /**
      * Принудительно сделать поле активным, в фокусе, наведении.
      * `hover, active, focus`
@@ -180,6 +181,9 @@ $color-placeholder: tint($neutral-500, 10%);
       &.hover {
         box-shadow: none;
       }
+    }
+    &[pass] {
+      font-size: $font-l;
     }
   }
 }
