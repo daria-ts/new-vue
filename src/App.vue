@@ -2,8 +2,11 @@
   <router-view />
 </template>
 
+<script>
+</script>
 <style lang="scss">
 @import "@/global-styles/styles.scss";
+
 
 //global typography
 
