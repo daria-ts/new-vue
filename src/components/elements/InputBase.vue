@@ -1,5 +1,8 @@
 <template>
-<component :is="wrapper" :class="['input', {'input-expand': width === 'expand'}]">
+  <component
+    :is="wrapper"
+    :class="['input', { 'input-expand': width === 'expand' }]"
+  >
     <label :for="id" v-if="label">{{ label }}</label>
     <input
       :id="id"
@@ -10,7 +13,7 @@
       :placeholder="placeholder"
       @input="onInput($event.target.value)"
       @focus="onFocus($event.target.value)"
-    >
+    />
   </component>
 </template>
 
@@ -27,6 +30,6 @@ export default {
 @import "@/global-styles/styles.scss";
 
 input {
-  @include input-flat;   //input-border or input-flat -- не смогла определиться
+  @include input-flat; //input-border or input-flat -- не смогла определиться
 }
 </style>

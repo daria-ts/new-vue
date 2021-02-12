@@ -3,10 +3,10 @@
     :is="type"
     :href="href"
     :type="submit"
-    :class="['button', size, state, priority, font,disabled]"
-  > 
-    <icon-base class="icon"> 
-        <Check /> 
+    :class="['button', size, state, priority, font, disabled]"
+  >
+    <icon-base class="icon">
+      <Check />
     </icon-base>
     <slot />
   </component>
@@ -14,78 +14,81 @@
 
 <script>
 import IconBase from "../../components/elements/IconBase.vue";
- import Check from "../../components/elements/icons/check.vue";
- 
+import Check from "../../components/elements/icons/check.vue";
 
 //TODO: логика, добавить иконку чек в кружочке в файлы svg
 export default {
-    components: { IconBase, Check },
-    props: {
-        type: { //html element for  button:`button, a`
-            type: String,
-            default: "button",
-            validator: value => {
-            return value.match(/(button|a)/);
-            }
-            },
-        
-        size: { //Размер по умолчанию большая: `s, l`
-            type: String,
-            default: "l",
-            validator: value => {
-            return value.match(/(l|s)/);
-            }
-        },
-        href: { //Если тип -- ссылка, то есть опция href.
-            type: String,
-            default: null
-        },
-        
-        submit: {// Set the button’s type to “submit”
-            type: String,
-            default: null,
-            validator: value => {
-            return value.match(/(null|submit)/);
-            }
-        },
-        font: { //шрифт -- по умолчанию заголовочный
-            type: String,
-            default: "head",
-            validator: value => {
-            return value.match(/(head|paragraph)/);
-            }
-        },
+  components: { IconBase, Check },
+  props: {
+    type: {
+      //html element for  button:`button, a`
+      type: String,
+      default: "button",
+      validator: value => {
+        return value.match(/(button|a)/);
+      }
+    },
 
-        priority: {
-            type: String,
-            default: "normal",
-            validator: value => {
-            return value.match(/(extra|height|normal|low)/);
-            }
-            // Приоритеты кнопок -- чтобы проще было устанавливать стили:
-            //`extra, hight, normal, low`
-            //по факту primary, dark, white-prymary-txt, white-gray-txt
-        },
+    size: {
+      //Размер по умолчанию большая: `s, l`
+      type: String,
+      default: "l",
+      validator: value => {
+        return value.match(/(l|s)/);
+      }
+    },
+    href: {
+      //Если тип -- ссылка, то есть опция href.
+      type: String,
+      default: null
+    },
 
-       //FIXME: с иконками не работает
-       //TODO: пока навешивается только на стиль -- доработать
-       disabled: {
-            type: String,
-            default: null,
-            validator: value => {
-            return value.match(/(null|disabled)/);
-            }
-        }
+    submit: {
+      // Set the button’s type to “submit”
+      type: String,
+      default: null,
+      validator: value => {
+        return value.match(/(null|submit)/);
+      }
+    },
+    font: {
+      //шрифт -- по умолчанию заголовочный
+      type: String,
+      default: "head",
+      validator: value => {
+        return value.match(/(head|paragraph)/);
+      }
+    },
+
+    priority: {
+      type: String,
+      default: "normal",
+      validator: value => {
+        return value.match(/(extra|height|normal|low)/);
+      }
+      // Приоритеты кнопок -- чтобы проще было устанавливать стили:
+      //`extra, hight, normal, low`
+      //по факту primary, dark, white-prymary-txt, white-gray-txt
+    },
+
+    //FIXME: с иконками не работает
+    //TODO: пока навешивается только на стиль -- доработать
+    disabled: {
+      type: String,
+      default: null,
+      validator: value => {
+        return value.match(/(null|disabled)/);
+      }
     }
+  }
 };
-
 </script>
 
 <style lang="scss" scoped>
 @import "@/global-styles/styles.scss";
 
 .button {
-    @include reset;
+  @include reset;
   @include button-template;
 
   // Sizes button-l -- for large, button-s for small
@@ -95,7 +98,7 @@ export default {
   &.s {
     @include button-s;
   }
-   //font
+  //font
   &.head {
     @include btn-h;
   }
@@ -116,31 +119,26 @@ export default {
     @include btn-priority-low;
   }
   &.disabled {
-      @include button-disabled;
+    @include button-disabled;
   }
-  
 
   //icon //TODO: пофиксить иконки -- пока не работает
   //TODO: пофиксить таб на мобайле
-  
-  }
-    
+}
 
- 
- .icon {
-     display: none;
+.icon {
+  display: none;
 
-     //icon show left 
-     &.left {
-        float: left;
-        margin-right: 0.5rem; 
-        display: inline;
+  //icon show left
+  &.left {
+    float: left;
+    margin-right: 0.5rem;
+    display: inline;
   }
-      &.right {
-        float: right;
-        margin-left: 0.5rem; 
-        display: inline;
+  &.right {
+    float: right;
+    margin-left: 0.5rem;
+    display: inline;
   }
- }
-
+}
 </style>

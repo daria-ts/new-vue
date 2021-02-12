@@ -1,6 +1,6 @@
 <template>
   <component :is="type" class="wrapper">
-    <slot/>
+    <slot />
   </component>
 </template>
 
@@ -19,10 +19,10 @@ export default {
      */
     type: {
       type: String,
-      default: "div",
-    },
-  },
-}
+      default: "div"
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -39,7 +39,6 @@ export default {
   }
 }
 </style>
-
 
 <docs>
   ```jsx
