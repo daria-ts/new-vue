@@ -1,0 +1,81 @@
+//button styles
+
+//общий стиль для всех кнопок
+
+@mixin button-template {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    border-radius: $radi-s;
+    box-shadow: $btn-shadow;
+    border: 0;
+    cursor: pointer;
+    &:hover,
+    &.hover {
+        box-shadow: $btn-shadow-inner;
+        transform: translateZ(0) scale(0.99);
+    }
+    &:active,
+    &.active {
+        transition: none;
+        box-shadow: none;
+        outline: 0;
+        outline-offset: 0;
+        transform: translateZ(0) scale(1);
+    }
+    &:focus,
+    &.focus {
+        box-shadow: none;
+        transform: translateZ(0) scale(1);
+        outline: 0;
+        outline-offset: 0;
+    }
+    .user-is-tabbing &:hover,
+    &.hover {
+        box-shadow: $btn-shadow-inner;
+        transform: translateZ(0) scale(0.98);
+    }
+}
+
+//sizes
+@mixin button-l {
+    padding: 0.75rem 0.875rem 0.75rem 1rem;
+}
+
+@mixin button-s {
+    padding: 0.25rem 1rem;
+}
+
+//priority
+
+@mixin btn-priority-extra {
+    background: $primary-500;
+    color: $white;
+}
+
+@mixin btn-priority-hight 
+    {
+    background: $neutral-700;
+    color: $white;
+    }
+
+ @mixin btn-priority-normal 
+    {
+     background: $white;
+     border: $border-xs solid $neutral-100;
+     color: $primary-500;
+    }
+    @mixin btn-priority-low
+    {
+        background: $white;
+        border: $border-xs solid $neutral-100;
+        color: $neutral-400;
+    }
+@mixin button-disabled {
+    opacity: $disabled;
+    
+}

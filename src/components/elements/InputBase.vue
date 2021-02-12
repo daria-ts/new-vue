@@ -1,5 +1,17 @@
 <template>
-  <input type="text" />
+<component :is="wrapper" :class="['input', {'input-expand': width === 'expand'}]">
+    <label :for="id" v-if="label">{{ label }}</label>
+    <input
+      :id="id"
+      :disabled="disabled"
+      :type="type"
+      :value="value"
+      :class="state"
+      :placeholder="placeholder"
+      @input="onInput($event.target.value)"
+      @focus="onFocus($event.target.value)"
+    >
+  </component>
 </template>
 
 <script>

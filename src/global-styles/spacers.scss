@@ -1,0 +1,32 @@
+$spacing-ratio: 1.7;
+
+// For interface containers
+// @param  {Number} inset-space to set
+@mixin inset-space($value) {
+  padding: $value;
+}
+
+// For buttons, form elements, cells.
+// @param  {Number} inset-squish-space to set
+@mixin inset-squish-space($value) {
+  padding: round($value / $spacing-ratio - 1px) $value round($value / $spacing-ratio);
+}
+
+// For vertically stacked content
+// @param  {Number} stack-space to set
+@mixin stack-space($value) {
+  margin-bottom: $value;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// For things displayed inline
+// @param  {Number} inline-space to set
+@mixin inline-space($value) {
+  margin-right: $value;
+  &:last-child {
+    margin-right: 0;
+  }
+}
