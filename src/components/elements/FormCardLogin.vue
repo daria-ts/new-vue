@@ -22,24 +22,24 @@
       />
       <bttn priority="extra">Войти</bttn>
     </form>
-    <!-- <bttn
-      disabled="disabled"
-      priority="hight"
-      icon="null"
-      font="paragraph"
-      is="a"
-      size="s">
-      test АААА
-    </bttn> -->
   </div>
 </template>
 
 <script>
+import { Auth } from "@/main"; //identity
 import Input from "../../components/elements/InputBase.vue";
 import Bttn from "../../components/elements/ButtonBase.vue";
+
 export default {
-  components: { Input, Bttn },
-  name: "FormCardLogin"
+  name: "FormCardLogin",
+  components: { 
+    Input, 
+    Bttn 
+    },
+    mounted() {
+      
+    }
+  
 };
 </script>
 
