@@ -18,12 +18,102 @@
 </template>
 
 <script>
+/**
+ * Для короткого текста или чисел -- в одну строку
+ */
 export default {
-  setup() {
-    return {};
+  name: "Input",
+  props: {
+    /**
+     * The type of the form input field.
+     * `text, number, email`
+     */
+    type: {
+      type: String,
+      default: "text",
+      validator: value => {
+        return value.match(/(text|number|email)/)
+      },
+    },
+    /**
+     * Text value of the form input field.
+     */
+    value: {
+      type: String,
+      default: null,
+    },
+    /**
+     * The placeholder value for the form input field.
+     */
+    placeholder: {
+      type: String,
+      default: null,
+    },
+    /**
+     * The label of the form input field.
+     */
+    label: {
+      type: String,
+      default: null,
+    },
+    /**
+     * The html element name used for the wrapper.
+     * `div, section`
+     */
+    wrapper: {
+      type: String,
+      default: "div",
+      validator: value => {
+        return value.match(/(div|section)/)
+      },
+    },
+    /**
+     * Unique identifier of the form input field.
+     */
+    id: {
+      type: String,
+      default: null,
+    },
+    /**
+     * The width of the form input field.
+     * `auto, expand`
+     */
+    width: {
+      type: String,
+      default: "expand",
+      validator: value => {
+        return value.match(/(auto|expand)/)
+      },
+    },
+    /**
+     * Whether the form input field is disabled or not.
+     * `true, false`
+     */
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * Manually trigger various states of the input.
+     * `hover, active, focus`
+     */
+    state: {
+      type: String,
+      default: null,
+      validator: value => {
+        return value.match(/(hover|active|focus)/)
+      },
+    },
   },
-  name: "InputBase"
-};
+  methods: {
+    onInput(value) {
+      this.$emit("change", value)
+    },
+    onFocus(value) {
+      this.$emit("focus", value)
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

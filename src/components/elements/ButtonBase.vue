@@ -18,6 +18,7 @@ import Check from "../../components/elements/icons/check.vue";
 
 //TODO: логика, добавить иконку чек в кружочке в файлы svg
 export default {
+  name: "Bttn",
   components: { IconBase, Check },
   props: {
     type: {

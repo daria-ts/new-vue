@@ -4,9 +4,9 @@
     <form class="login" action="">
       <InputBase class="child" />
       <InputBase class="child" />
-      <button-base priority="extra">Войти</button-base>
+      <bttn priority="extra">Войти</bttn>
     </form>
-    <button-base
+    <bttn
       disabled="disabled"
       priority="hight"
       icon="null"
@@ -14,17 +14,17 @@
       is="a"
       size="s">
       test АААА
-    </button-base><button-base>test</button-base>
+    </bttn><button-base>test</button-base>
   </div>
 </template>
 
 <script>
 
 import InputBase from "../../components/elements/InputBase.vue";
-import ButtonBase from "../../components/elements/ButtonBase.vue";
+import Bttn from "../../components/elements/ButtonBase.vue";
 
 export default {
-  components: { InputBase, ButtonBase },
+  components: { InputBase, Bttn },
   name: "FormCardLogin"
 };
 </script>
