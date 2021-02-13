@@ -1,27 +1,29 @@
-<template>    
-<div class="pwa-list">
+<template>
+  <div class="pwa-list">
     <ul id="pwalist" class="list">
-        <li v-for="item in items" :key="item.pwa">{{item.pwa}}</li>
+      <li v-for="item in items" :key="item.pwa">{{ item.pwa }}</li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-    name: "PwaList",
-    data () {
-        return {
-        items:[
-            {pwa: 'Работает на любых устройствах'},
-            {pwa: 'Весит меньше 1 Мб'},
-            {pwa: 'Не нужно обновлять'},
-            {pwa: 'Можно пользоваться без\u00A0интернета'},
-            {pwa: 'Быстро грузится'},
-            {pwa: 'Гарантирует безопасность ваших данных и\u00A0конфиденциальность'}
-        ]
+  name: "PwaList",
+  data() {
+    return {
+      items: [
+        { pwa: "Работает на любых устройствах" },
+        { pwa: "Весит меньше 1 Мб" },
+        { pwa: "Не нужно обновлять" },
+        { pwa: "Можно пользоваться без\u00A0интернета" },
+        { pwa: "Быстро грузится" },
+        {
+          pwa: "Гарантирует безопасность ваших данных и\u00A0конфиденциальность"
         }
-    }
-}
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -53,8 +55,8 @@ li {
   right: 0px;
   bottom: 0px;
 }
-@media (max-width: $br-sm){
- .pwa-list {
+@media (max-width: $br-sm) {
+  .pwa-list {
     display: none;
   }
 }

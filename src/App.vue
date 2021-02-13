@@ -2,11 +2,9 @@
   <router-view />
 </template>
 
-<script>
-</script>
+<script></script>
 <style lang="scss">
 @import "@/global-styles/styles.scss";
-
 
 //global typography
 
@@ -44,7 +42,7 @@ li {
 .feature-red {
   @include overline($primary-500);
 }
-*{
+* {
   @include transition-global;
 }
 #app {

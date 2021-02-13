@@ -2,6 +2,7 @@
   <div class="wrapper">
     <h2>ВХОД ДЛЯ КЛИЕНТОВ</h2>
     <form @submit.prevent="handleSubmit" class="loginform">
+      <Input id="userName" type="text" placeholder="Имя" v-model="userName" />
       <Input
         id="Email"
         type="email"
@@ -37,13 +38,15 @@ export default {
   },
   setup() {
     //refs
+    const userName = ref("");
     const email = ref("");
     const password = ref("");
 
     const handleSubmit = () => {
-      console.log(email.value, password.value);
+      console.log(userName.value, email.value, password.value);
     };
     return {
+      userName,
       email,
       password,
       handleSubmit

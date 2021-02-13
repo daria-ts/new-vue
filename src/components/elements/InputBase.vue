@@ -169,9 +169,8 @@ $color-placeholder: tint($neutral-500, 10%);
     &.focus {
       transition: box-shadow 0.2s ease;
       box-shadow: $input-shadow-focus;
-      outline:none;
+      outline: none;
       outline-offset: 0;
-      
     }
     &[disabled] {
       -webkit-font-smoothing: antialiased;

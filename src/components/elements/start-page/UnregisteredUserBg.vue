@@ -28,13 +28,13 @@
   <div class="left-block">
     Личный кабинет создан по&nbsp;технологии <nobr>PWA-приложения:</nobr>
   </div>
-<PwaList />
+  <PwaList />
 </template>
 
 // TODO: добавить ссылки -- лучше всплывашки подсказки
 <script>
 import Icon from "@/components/elements/Icon.vue";
-import PwaList from "@/components/elements/start-page/PwaList.vue"
+import PwaList from "@/components/elements/start-page/PwaList.vue";
 
 export default {
   data() {
@@ -146,7 +146,6 @@ h4 {
     }
   }
 }
-
 
 //текст про технологии
 .left-block {
