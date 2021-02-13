@@ -8,8 +8,8 @@
 //bg = on-whine/red/black -- в зависимости от фона
 <script>
 import LogoFull from "@/components/elements/LogoFull.vue";
-import FormCardLinks from "@/components/elements/FormCardLinks.vue";
-import FormCardLogin from "@/components/elements/FormCardLogin.vue";
+import FormCardLinks from "@/components/elements/start-page/FormCardLinks.vue";
+import FormCardLogin from "@/components/elements/start-page/FormCardLogin.vue";
 export default {
   components: { LogoFull, FormCardLinks, FormCardLogin },
   name: "FormCard"

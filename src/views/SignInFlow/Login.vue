@@ -7,8 +7,8 @@
 
 // TODO: добавить ссылки -- лучше всплывашки подсказки
 <script>
-import FormCard from "@/components/FormCard.vue";
-import UnregisteredUserBg from "@/components/UnregisteredUserBg.vue";
+import FormCard from "@/components/elements/start-page/FormCard.vue";
+import UnregisteredUserBg from "@/components/elements/start-page/UnregisteredUserBg.vue";
 
 export default {
   components: { UnregisteredUserBg, FormCard },

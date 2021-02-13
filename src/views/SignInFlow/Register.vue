@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import UnregisteredUserBg from "@/components/UnregisteredUserBg.vue";
+import UnregisteredUserBg from "@/components/elements/start-page/UnregisteredUserBg.vue";
 
 export default {
   components: { UnregisteredUserBg },

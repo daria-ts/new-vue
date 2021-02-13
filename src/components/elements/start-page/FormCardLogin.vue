@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import Input from "../../components/elements/InputBase.vue";
-import Bttn from "../../components/elements/ButtonBase.vue";
+import Input from "@/components/elements/InputBase.vue";
+import Bttn from "@/components/elements/ButtonBase.vue";
 
 export default {
   name: "FormCardLogin",

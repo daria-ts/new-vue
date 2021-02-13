@@ -28,21 +28,13 @@
   <div class="left-block">
     Личный кабинет создан по&nbsp;технологии <nobr>PWA-приложения:</nobr>
   </div>
-  <div class="left-list">
-    <ul>
-      <li>Работает на любых устройствах</li>
-      <li>Весит меньше 1 Мб</li>
-      <li>Не нужно обновлять</li>
-      <li>Можно пользоваться без&nbsp;интернета</li>
-      <li>Быстро грузится</li>
-      <li>Обеспечивает безопасность ваших данных и&nbsp;конфиденциальность</li>
-    </ul>
-  </div>
+<PwaList />
 </template>
 
 // TODO: добавить ссылки -- лучше всплывашки подсказки
 <script>
 import Icon from "@/components/elements/Icon.vue";
+import PwaList from "@/components/elements/start-page/PwaList.vue"
 
 export default {
   data() {
@@ -57,7 +49,7 @@ export default {
         "https://static.tildacdn.com/tild3562-6363-4036-a534-363631313534/circle.svg"
     };
   },
-  components: { Icon },
+  components: { Icon, PwaList },
   name: "UnregisteredUserBg"
 };
 </script>
@@ -155,33 +147,7 @@ h4 {
   }
 }
 
-// список фич
-ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-block: 1.5rem;
-}
 
-li {
-  min-width: 9.5rem;
-  max-width: 18.5rem;
-  text-align: left;
-  padding: 0.35rem;
-  margin-left: 1rem;
-}
-//список с фоном
-.left-list {
-  position: absolute;
-  width: 30%;
-  min-width: 15.7rem;
-  background: $neutral-050;
-  border: solid $neutral-200;
-  border-width: 1px 0px 0px 1px;
-  box-sizing: border-box;
-  right: 0px;
-  bottom: 0px;
-}
 //текст про технологии
 .left-block {
   position: absolute;
@@ -286,20 +252,11 @@ li {
       }
     }
   }
-  .left-list {
-    display: none;
-  }
+
   .sign-foo {
     display: none;
-    /* width: 100%;
-    text-align: center;
-        border: solid $neutral-200;
-  border-width: 1px 0px 0px 0px; */
   }
-  /* .os-icon {
-      
-        width: 50%;
-  } */
+
   .install-padding {
     display: none;
   }
