@@ -31,7 +31,7 @@ import Bttn from "@/components/elements/ButtonBase.vue";
 import { ref } from "vue";
 
 export default {
-  name: "FormCardLogin",
+  name: "FormCardSignup",
   components: {
     Input,
     Bttn
