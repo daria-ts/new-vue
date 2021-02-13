@@ -1,23 +1,33 @@
 <template>
   <div class="wrapper">
     <h2>ВХОД ДЛЯ КЛИЕНТОВ</h2>
-    <form @submit.prevent="FormCardLogin()" class="loginform">
+    <form @submit.prevent="handleSubmit" class="loginform">
+      <Input
+        id="userName"
+        type="text"
+        placeholder="Имя"
+        v-model="userName"
+      />
       <Input
         id="Email"
         type="email"
         placeholder="Почта"
         required
-        v-model="loginCreds.email"
+        v-model="email"
       />
       <Input
-        id="userPassword"
+        id="Password"
         placeholder="Пароль"
         type="password"
         required
-        v-model="loginCreds.password"
+        v-model="password"
         autocomplete="current-password"
       />
-      <bttn type="Submit" priority="extra">Войти</bttn>
+      <bttn 
+        type="Submit" 
+        priority="extra">
+        Войти
+      </bttn>
     </form>
   </div>
 </template>
@@ -25,6 +35,7 @@
 <script>
 import Input from "@/components/elements/InputBase.vue";
 import Bttn from "@/components/elements/ButtonBase.vue";
+import { ref } from 'vue'
 
 export default {
   name: "FormCardLogin",
@@ -32,12 +43,17 @@ export default {
     Input,
     Bttn
   },
-  data() {
+  setup() {
+    //refs
+    const userName = ref('')
+    const email = ref('')
+    const password = ref('')
+
+    const handleSubmit = () => {
+        console.log (userName.value, email.value, password.value)
+    }
     return {
-      loginCreds: {
-        email: null,
-        password: null
-      }
+      userName, email, password
     };
   },
 

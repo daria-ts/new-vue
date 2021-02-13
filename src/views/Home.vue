@@ -3,7 +3,7 @@
     <Header />
 
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <router-link class="caption" :to="{ name: 'login' }">login</router-link>
+    <router-link class="caption" :to="{ name: 'welcome' }">login</router-link>
     <router-link class="caption" :to="{ name: 'components' }"
       >components</router-link
     >
